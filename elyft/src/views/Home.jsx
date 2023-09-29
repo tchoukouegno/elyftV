@@ -5,9 +5,11 @@ import pexelsEunice from "../assets/img/pexelsEunice.jpg";
 import teamWork from "../assets/img/teamWork.jpeg";
 import pexelsDarlene from "../assets/img/pexelsDarlene.jpg";
 import chevronRight from "../assets/icons/chevronRight.svg";
-import linkedin from "../assets/icons/linkedin.svg";
-import facebook from "../assets/icons/facebook.svg";
-import instagram from "../assets/icons/instagram.svg";
+import usersSolid from "../assets/icons/usersSolid.svg";
+import trophySolid from "../assets/icons/trophySolid.svg"
+import { Contact } from "../widgets/Contact";
+import {useNavigate} from "react-router-dom";
+import homeHeader from "../assets/img/homeHeader.jpeg";
 
 
 
@@ -18,14 +20,20 @@ import instagram from "../assets/icons/instagram.svg";
 export function Home() {
 
 
+    let navigate = useNavigate();
 
+    const handleServices = ()=>{
+
+      return  navigate('/services');
+
+    }
 
     return(
 
         <div className="bloc-page">
         
         
-        <Header/>
+        <Header pageTitle="Construire des Technologies qui Transforment Votre Business" srcImg={homeHeader} active="active" />
 
         <section className="body-content">
 
@@ -46,14 +54,14 @@ export function Home() {
 
                     <div className="help-customer">
 
-                        <img src={chartSimpleSolid} alt="icon-illustrator" className="icon-illustrator"/>
+                        <img src={usersSolid} alt="icon-illustrator" className="icon-illustrator"/>
                         <span>Augmenter la rétention client</span>
 
                     </div>
 
                     <div className="help-customer">
 
-                        <img src={chartSimpleSolid} alt="icon-illustrator" className="icon-illustrator"/>
+                        <img src={trophySolid} alt="icon-illustrator" className="icon-illustrator"/>
                         <span>Rester compétitif et innovant</span>
 
                     </div>
@@ -148,7 +156,7 @@ export function Home() {
 
                     <span>...</span>
 
-                    <button className="services">Voir les services</button>
+                    <button onClick={handleServices} className="services">Voir les services</button>
 
                 </div>
             
@@ -234,134 +242,7 @@ export function Home() {
         
         </section> 
 
-        <section className="repeat-page" id="contact">
-
-            <div className="contact-content">
-
-                <div className="contact-text">
-
-                    <span>LOGO</span>
-
-                    <h3>Pret à transformer votre entreprise?</h3>
-
-                    <p className="text-contact">Collaborez avec nous, pour développer les technologies qui optimiseront
-                        votre entreprise !
-                    </p>
-
-
-                </div>
-
-                <form className="form-items">
-
-                    <div className="form-item-flx">
-
-                        <div className="form-item">
-
-                            <label htmlFor="first_name">First Name*</label>
-                            <input className="input-form"/>
-
-                        </div>
-
-                        <div className="form-item">
-
-                            <label htmlFor="last_name">Last Name*</label>
-                            <input  className="input-form"/>
-
-                        </div>
-
-                    </div>
-
-                    <div className="form-item-flx">
-
-                        <div className="form-item">
-
-                            <label htmlFor="email">Email*</label>
-                            <input  className="input-form"/>
-
-                        </div>
-
-                        <div className="form-item" >
-
-                            <label htmlFor="phone">Téléphone*</label>
-                            <input  className="input-form"/>
-
-                        </div>
-
-                    </div>
-
-                    <div className="form-item">
-
-                        <label htmlFor="need">Votre besoin*</label>
-                        <input  className="input-form" id="need"/>
-                        
-
-                    </div>
-
-                    <button className="btn-send" >Envoyer</button>
-
-                </form>
-
-            </div>
-
-        </section>
-
-        <footer className="footer">
-
-            <div className="footer-text">
-
-                <p >Elyft est une entreprise de création de produit numérique basée en France qui s'associe
-                    à des propriètaire de PME pour transformer leurs entreprises et leurs relations avec leurs
-                    cleints grace aux technologies numériques. Nous sommes convaincus que des technologies adéquates 
-                    crées sur la base d'objectifs clairs peuvent propulser de nombreuses entreprises les aider
-                    à créer plus de proximité et augmenter considérablement leur éfficacité, leurs chiffres d'affaires 
-
-                </p>
-
-                <nav>
-
-                        <ul className="footer-nav">
-
-                            <li>SERVICES</li>
-                            <li>TECHNOLOGIES</li>
-                            <li>A PROPOS</li>
-                            <li>BLOG</li>
-
-                        </ul>
-
-                </nav>
-
-                <p className="reserved">2023 Elyft. All rights reserved</p>
-
-
-            </div>
-
-           
-            <div className="footer-adress">
-
-                <div  className="footer-adress-number">
-
-                    <span>Elyft France</span>
-                    <span>Adresse xxxxxx</span>
-                    <span>Adresse xxxxxx</span>
-
-
-                </div>
-
-                <div className="social-media">
-
-                    <img src={linkedin} alt="icon linkedin" className="likdn"/>
-                    <img src={facebook} alt="icon facebook" className="fcbk"/>
-                    <img src={instagram} alt="icon instagram" className="insta"/>
-
-                </div>
-
-                
-
-            </div>
-
-
-        </footer>
-
+        <Contact/>
 
         
         

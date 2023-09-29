@@ -1,9 +1,10 @@
-import homeHeader from "../assets/img/homeHeader.jpeg"
+
 import LogoElyft from "../assets/logo/LogoElyft.jpg"
 import "../styles/home.css";
 import linkedin from "../assets/icons/linkedin.svg";
 import facebook from "../assets/icons/facebook.svg";
 import instagram from "../assets/icons/instagram.svg";
+import {useNavigate} from "react-router-dom";
 
 
 
@@ -11,7 +12,41 @@ import instagram from "../assets/icons/instagram.svg";
 
 
 
-export function Header() {
+export function Header({pageTitle, srcImg, headerDescription, textUp, active, activeServices, activeTech, activePropos, activeBlog}) {
+
+
+    let navigate = useNavigate();
+
+    const handleHome = ()=>{
+
+      return  navigate('/home');
+
+    }
+
+    const handleTechno = ()=>{
+
+        return navigate('/technologie');
+
+    }
+
+    const handlePropos = ()=>{
+
+        return navigate('/apropos');
+
+    }
+
+    const handleBlog = ()=>{
+
+        return navigate('/blog');
+
+    }
+
+    const handleServices = ()=>{
+
+        return navigate('/services');
+
+    }
+
 
 
 
@@ -21,21 +56,21 @@ export function Header() {
 
         <header className="header-content" id="bloc-page">
 
-            <img src={homeHeader} className="home-header" alt="home-header"/>
+            <img src={srcImg} className="home-header" alt="home-header"/>
 
             <div className="nav-bar-content">
 
                 {/* <img src={LogoElyft} alt="logo-elyft" className="logo"/> */}
-                <div className="logo-text">LOGO</div>
+                <div onClick={handleHome} className="logo-text">LOGO</div>
 
                 <nav>
 
                     <ul className="nav-bar">
-
-                        <li><a href="#services">SERVICES</a></li>
-                        <li>TECHNOLOGIES</li>
-                        <li>A PROPOS</li>
-                        <li>BLOG</li>
+                        <li className={active}><a onClick={handleHome}>ACCUEIL</a></li>
+                        <li className={activeServices}><a onClick={handleServices}>SERVICES</a></li>
+                        <li className={activeTech} onClick={handleTechno}>TECHNOLOGIES</li>
+                        <li className={activePropos} onClick={handlePropos}>A PROPOS</li>
+                        <li className={activeBlog} onClick={handleBlog}>BLOG</li>
 
                     </ul>
 
@@ -43,9 +78,11 @@ export function Header() {
 
             </div>
 
-            <h1 className="home-title">Construire des Technologies qui Transforment Votre Business</h1>
+            <h1 className="home-title">{pageTitle}</h1>
             
             <div className="header-contact">
+
+                <span className="header-text-description" id={textUp}>{headerDescription}</span>
 
                 <a className="btn-contact" href="#contact">Nous Contactez</a>
 
