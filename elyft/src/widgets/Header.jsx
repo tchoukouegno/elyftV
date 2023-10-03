@@ -70,7 +70,7 @@ export function Header({pageTitle, srcImg, headerDescription, textUp, active, ac
                         <li className={activeServices}><a onClick={handleServices}>SERVICES</a></li>
                         <li className={activeTech} onClick={handleTechno}>TECHNOLOGIES</li>
                         <li className={activePropos} onClick={handlePropos}>A PROPOS</li>
-                        <li className={activeBlog} onClick={handleBlog}>BLOG</li>
+                        {/* <li className={activeBlog} onClick={handleBlog}>BLOG</li> */}
 
                     </ul>
 
