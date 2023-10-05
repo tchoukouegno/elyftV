@@ -66,7 +66,7 @@ export function Contact () {
                         <div className="form-item" >
 
                             <label htmlFor="phone">Téléphone*</label>
-                            <input  className="input-form" placeholder="+33 7 84 65 15 12"/>
+                            <input  className="input-form" type="number" placeholder="+33 7 84 65 15 12"/>
 
                         </div>
 
