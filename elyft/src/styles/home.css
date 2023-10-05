@@ -646,6 +646,7 @@ a {
 
     background-color: #FFFFFF;
     height: 425px;
+    width: 1100px;
     border-radius: 50px;
     box-shadow: 5px 0px 4px 3px #E1E1E1;
     display: flex;
@@ -752,8 +753,9 @@ input:focus {
 .repeat-page {
 
     transform: translate3d(0,50px,0) !important;
-    /* background-color: red; */
-
+   display: flex;
+   justify-content: center;
+   
 }
 
 .footer {

@@ -17,7 +17,7 @@ export function Contact () {
 
     <>
         
-        <section className="repeat-page" id="contact">
+        <section className="repeat-page " id="bloc-page">
 
             <div className="contact-content">
 
