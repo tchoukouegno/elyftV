@@ -41,14 +41,14 @@ export function Contact () {
                         <div className="form-item">
 
                             <label htmlFor="first_name">Nom*</label>
-                            <input className="input-form"/>
+                            <input className="input-form" placeholder="jean"/>
 
                         </div>
 
                         <div className="form-item">
 
                             <label htmlFor="last_name">Prénom*</label>
-                            <input  className="input-form"/>
+                            <input  className="input-form" placeholder="laporte"/>
 
                         </div>
 
@@ -59,14 +59,14 @@ export function Contact () {
                         <div className="form-item">
 
                             <label htmlFor="email">Email*</label>
-                            <input  className="input-form"/>
+                            <input  className="input-form" placeholder="jl@gmail.com"/>
 
                         </div>
 
                         <div className="form-item" >
 
                             <label htmlFor="phone">Téléphone*</label>
-                            <input  className="input-form"/>
+                            <input  className="input-form" placeholder="+33 7 84 65 15 12"/>
 
                         </div>
 
