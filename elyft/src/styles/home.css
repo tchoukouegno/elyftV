@@ -65,6 +65,7 @@ html,body {
     z-index: 1;
     left: 0;
     top: 0;
+    transition: 400ms ease-in-out;
 }
 
 .nav-bar-content {
@@ -282,6 +283,13 @@ a {
 
 }
 
+.proximity-customer .filtre:hover {
+
+    opacity: 0.2;
+    transition: 400ms ease-in-out;
+
+}
+
 .help-customer {
 
     display: flex;
@@ -294,8 +302,15 @@ a {
     gap: 10px;
     background-color: #FFFFFF;
     /* width: 450px; */
+    transition: 400ms ease-in-out;
 
-    box-shadow: 3px 3px 3px 3px #E1E1E1;
+    box-shadow: 2px 2px 2px 2px #E1E1E1;
+
+}
+
+.help-customer:hover {
+
+    box-shadow: 5px 5px 5px 5px #E1E1E1;
 
 }
 
@@ -315,11 +330,11 @@ a {
 
 .section-title {
 
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     display: block;
     text-align: center;
-    transform: translate3d(0,25px,0);
+    transform: translate3d(0,40px,0);
 
 }
 
