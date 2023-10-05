@@ -1,8 +1,8 @@
 import { Header } from "../widgets/Header";
 import chartSimpleSolid from "../assets/icons/chartSimpleSolid.svg";
 import yougCoupleWork from "../assets/img/yougCoupleWork.jpg";
-import pexelsEunice from "../assets/img/pexelsEunice.jpg";
-import teamWork from "../assets/img/teamWork.jpeg";
+import girlCode from "../assets/img/girlCode.jpg";
+import teamWork from "../assets/img/teamWork.jpg";
 import pexelsDarlene from "../assets/img/pexelsDarlene.jpg";
 import chevronRight from "../assets/icons/chevronRight.svg";
 import usersSolid from "../assets/icons/usersSolid.svg";
@@ -180,7 +180,7 @@ export function Home() {
 
                         <div>
 
-                            <img src={pexelsEunice} alt="" className="img-team-bg"/>
+                            <img src={girlCode} alt="" className="img-team-bg"/>
                             <img src={teamWork}  alt="" className="img-team-bg" id="img-team"/>
 
                         </div>
@@ -202,8 +202,8 @@ export function Home() {
 
                 </div>
 
-                <span className="section-title">ECOUTEZ NOS CLIENTS</span>
-                <h2 className="sub-section-title">ils nous font confiance</h2> 
+                <span className="section-title">Ecoutez nos clients</span>
+                <h2 className="sub-section-title">Ils nous font confiance</h2> 
 
                 <div  >
                     

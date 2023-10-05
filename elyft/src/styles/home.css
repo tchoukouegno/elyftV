@@ -469,7 +469,7 @@ a {
 .team-work {
 
     background-color: #e4e4e4;
-    height: 550px;
+    height: 480px;
     border-radius: 70px;
     padding-left: 35px;
     padding-right: 35px;
@@ -507,6 +507,15 @@ a {
     left: 95px;
     z-index: 1;
     transform: rotate(10deg);
+    transition: 500ms ease-in-out;
+
+}
+
+#img-team:hover {
+
+    opacity: 0;
+    transition: 700ms ease-in-out;
+    transform: rotate(-180deg);
 
 }
 
@@ -520,9 +529,10 @@ a {
 .work-heart {
 
     position: absolute;
-    bottom: 45px;
+    bottom: 10px;
     left: 50px;
     padding: 30px;
+    font-size: 1.3rem !important;
 
 }
 
@@ -547,7 +557,8 @@ a {
 
 .description-text {
 
-    font-size: 1.3rem; 
+    font-size: 1.3rem !important; 
+
 
 }
 
@@ -570,6 +581,15 @@ a {
 .customer-comment {
 
     text-align: center;
+    width: 750px;
+    font-size: 1rem !important;
+
+}
+
+.customer-avis {
+
+    display: flex;
+    align-items: center;
 
 }
 
@@ -641,7 +661,7 @@ a {
 
 .contact-content div span {
 
-    font-size: 3rem;
+    font-size: 2rem;
 
 }
 
@@ -656,13 +676,13 @@ a {
 
 .contact-content div h3 {
 
-    font-size:2.8rem;
+    font-size:2.3rem;
 
 }
 
 .text-contact  {
 
-    font-size:1.5rem;
+    font-size:1.3rem;
     
 }
 
@@ -731,8 +751,8 @@ input:focus {
 
 .repeat-page {
 
-    transform: translate3d(0,50px,0);
-    background-color: #FBFBFB;
+    transform: translate3d(0,50px,0) !important;
+    /* background-color: red; */
 
 }
 
