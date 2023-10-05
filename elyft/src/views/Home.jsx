@@ -1,6 +1,6 @@
 import { Header } from "../widgets/Header";
 import chartSimpleSolid from "../assets/icons/chartSimpleSolid.svg";
-import yougCoupleWork from "../assets/img/yougCoupleWork.jpeg";
+import yougCoupleWork from "../assets/img/yougCoupleWork.jpg";
 import pexelsEunice from "../assets/img/pexelsEunice.jpg";
 import teamWork from "../assets/img/teamWork.jpeg";
 import pexelsDarlene from "../assets/img/pexelsDarlene.jpg";
@@ -9,7 +9,14 @@ import usersSolid from "../assets/icons/usersSolid.svg";
 import trophySolid from "../assets/icons/trophySolid.svg"
 import { Contact } from "../widgets/Contact";
 import {useNavigate} from "react-router-dom";
-import homeHeader from "../assets/img/homeHeader.jpeg";
+import homeHeader from "../assets/img/homeHeader.jpg";
+import icons8BalanceScale from "../assets/icons/icons8BalanceScale.png";
+import icons8Respect from "../assets/icons/icons8Respect.png";
+import icons8GraduationCap from "../assets/icons/icons8GraduationCap.png";
+import icons8Android from "../assets/icons/icons8Android.png";
+import icons8WebSite from "../assets/icons/icons8WebSite.png";
+import icons8ImacSettings from "../assets/icons/icons8ImacSettings.png";
+import icons8Design from "../assets/icons/icons8Design.png";
 
 
 
@@ -93,21 +100,21 @@ export function Home() {
 
                         <div className="value-bx">
 
-                            <img src={chartSimpleSolid} alt="equité" className="value-item" />
+                            <img src={icons8BalanceScale} alt="equité" className="value-item" />
                             <span>Equité</span>
 
                         </div>
 
                         <div className="value-bx">
 
-                            <img src={chartSimpleSolid} alt="respect" className="value-item" />
+                            <img src={icons8Respect} alt="respect" className="value-item" />
                             <span>Respect</span>
 
                         </div>
 
                         <div className="value-bx">
 
-                            <img src={chartSimpleSolid} alt="excellence" className="value-item" />
+                            <img src={icons8GraduationCap} alt="excellence" className="value-item" />
                             <span>Excellence</span>
 
                         </div>
@@ -128,28 +135,28 @@ export function Home() {
 
                         <div className="service">
 
-                            <img src={chartSimpleSolid} alt="application mobile" className="value-item" />
+                            <img src={icons8Android} alt="application mobile" className="value-item" />
                             <span>Application Mobile</span>
 
                         </div>
 
                         <div className="service">
 
-                            <img src={chartSimpleSolid} alt="application web" className="value-item" />
+                            <img src={icons8WebSite} alt="application web" className="value-item" />
                             <span>Application web</span>
 
                         </div>
 
                         <div className="service">
 
-                            <img src={chartSimpleSolid} alt="excellence" className="value-item" />
+                            <img src={icons8ImacSettings} alt="excellence" className="value-item" />
                             <span>Logiciel Personnalisées</span>
 
                         </div>
 
                         <div className="service">
 
-                            <img src={chartSimpleSolid} alt="excellence" className="value-item" />
+                            <img src={icons8Design} alt="excellence" className="value-item" />
                             <span>UI/UX Design</span>
 
                         </div>
