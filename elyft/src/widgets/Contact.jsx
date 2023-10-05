@@ -40,14 +40,14 @@ export function Contact () {
 
                         <div className="form-item">
 
-                            <label htmlFor="first_name">First Name*</label>
+                            <label htmlFor="first_name">Nom*</label>
                             <input className="input-form"/>
 
                         </div>
 
                         <div className="form-item">
 
-                            <label htmlFor="last_name">Last Name*</label>
+                            <label htmlFor="last_name">Prénom*</label>
                             <input  className="input-form"/>
 
                         </div>
