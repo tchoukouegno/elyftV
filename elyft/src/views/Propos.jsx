@@ -2,6 +2,10 @@ import { Header } from "../widgets/Header";
 import pexelsPropos from "../assets/img/pexelsPropos.jpg"
 import { Contact } from "../widgets/Contact";
 import chartSimpleSolid from "../assets/icons/chartSimpleSolid.svg";
+import humanCenter from "../assets/icons/humanCenter.png";
+import technology from "../assets/icons/technology.png";
+import icons8BalanceScale from "../assets/icons/icons8BalanceScale.png";
+import authentic from "../assets/icons/authentic.png";
 
 
 
@@ -32,28 +36,28 @@ export function Propos () {
 
                     <div className="value-bx">
 
-                        <img src={chartSimpleSolid} alt="equité" className="value-item" />
-                        <span className="value-team">L'humain au coeur de tout</span>
+                        <img src={humanCenter} alt="equité" className="value-item" />
+                        <span className="value-team">L'humain au centre</span>
 
                     </div>
 
                     <div className="value-bx">
 
-                         <img src={chartSimpleSolid} alt="respect" className="value-item" />
+                         <img src={technology} alt="respect" className="value-item" />
                          <span className="value-team">Veille Technologique</span>
 
                     </div>
 
                     <div className="value-bx">
 
-                         <img src={chartSimpleSolid} alt="excellence" className="value-item" />
+                         <img src={icons8BalanceScale} alt="excellence" className="value-item" />
                          <span className="value-team">L'équité prime</span>
 
                     </div >
 
                      <div className="value-bx">
 
-                         <img src={chartSimpleSolid} alt="excellence" className="value-item" />
+                         <img src={authentic} alt="excellence" className="value-item" />
                          <span className="value-team">Authenticité</span>
 
                     </div>
@@ -72,28 +76,28 @@ export function Propos () {
                     <div className="person-name">
 
                         <div className="img-person"></div>
-                        <span>Nom prénom</span>
+                        <span>prénom nom</span>
 
                     </div>
 
                     <div className="person-name">
 
                         <div className="img-person"></div>
-                        <span>Nom prénom</span>
+                        <span>prénom nom</span>
 
                     </div>
 
                     <div className="person-name">
 
                         <div className="img-person"></div>
-                        <span>Nom prénom</span>
+                        <span>prénom nom</span>
 
                     </div>
 
                     <div className="person-name">
 
                         <div className="img-person"></div>
-                        <span>Nom prénom</span>
+                        <span>prénom nom</span>
 
                     </div>
 
