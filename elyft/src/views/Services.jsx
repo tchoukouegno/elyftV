@@ -2,6 +2,12 @@ import { Header } from "../widgets/Header";
 import pexelsFauxels from "../assets/img/pexelsFauxels.jpg";
 import { Contact } from "../widgets/Contact";
 import {useNavigate, Outlet} from "react-router-dom";
+import appdev from "../assets/img/appdev.svg";
+import webapp from "../assets/img/webapp.svg";
+import appPerso from "../assets/img/appPerso.svg";
+import product from "../assets/img/product.svg";
+import marketing from "../assets/img/marketing.jpg";
+import ui from "../assets/img/ui.jpg";
 
 
 
@@ -46,7 +52,7 @@ export function Services () {
 
                         <div className="card-item">
 
-                            <div className="card-img"></div>
+                            <img src={appdev} className="card-img"/>
 
                             <span className="card-title">Développement D'Appli Mobile</span>
 
@@ -59,7 +65,7 @@ export function Services () {
 
                         <div className="card-item">
 
-                            <div className="card-img"></div>
+                            <img src={webapp} className="card-img"/>
 
                             <span className="card-title">Développement D'Appli Web</span>
 
@@ -72,7 +78,7 @@ export function Services () {
 
                         <div className="card-item">
 
-                            <div className="card-img"></div>
+                            <img src={appPerso} className="card-img"/>
 
                             <span className="card-title">Logiciels Personnalisés</span>
 
@@ -85,7 +91,7 @@ export function Services () {
 
                          <div className="card-item">
 
-                            <div className="card-img"></div>
+                            <img src={product} className="card-img"/>
 
                             <span className="card-title">Stratégie de Produit</span>
 
@@ -99,7 +105,7 @@ export function Services () {
 
                         <div className="card-item">
 
-                            <div className="card-img"></div>
+                            <img src={marketing} className="card-img"/>
 
                             <span className="card-title">Stratégie de Marketing </span>
 
@@ -112,7 +118,7 @@ export function Services () {
 
                         <div className="card-item">
 
-                            <div className="card-img"></div>
+                            <img src={ui} className="card-img"/>
 
                             <span className="card-title">UX/UI Design</span>
 

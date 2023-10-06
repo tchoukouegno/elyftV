@@ -205,7 +205,7 @@ export function Home() {
                 <span className="section-title">Ecoutez nos clients</span>
                 <h2 className="sub-section-title">Ils nous font confiance</h2> 
 
-                <div  >
+                <div>
                     
                     <div className="customer-slider">
 

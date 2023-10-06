@@ -34,12 +34,9 @@ import { ServiceDetail } from '../widgets/ServiceDetail';
 
             <Route path='/home' element={<Home/>}/>
 
-            <Route path='/services' element={<Services/>}>
+            <Route path='/services' element={<Services/>}/>
 
-                <Route path='/services/detail' element={<ServiceDetail/>}/>
-
-
-            </Route>
+            <Route path='/services/detail' element={<ServiceDetail/>}/>
 
             <Route path='/technologie' element={<Techno/>}/>
 

@@ -574,6 +574,7 @@ a {
 
     display: flex;
     justify-content: center;
+    padding-top: 25px;
 
 }
 
@@ -964,10 +965,12 @@ input:focus {
 .card-img {
 
     height: 170px;
-    width: 100%;
-    background-color: #048B8A;
+    width: 100% ;
+    margin-top: 20px;
+    /* background-color: #048B8A; */
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    object-fit: cover;
 
 }
 
