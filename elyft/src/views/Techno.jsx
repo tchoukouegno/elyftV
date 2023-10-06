@@ -2,7 +2,9 @@ import { Header } from "../widgets/Header";
 import pexelsLukas from "../assets/img/pexelsLukas.jpg";
 import professional from "../assets/img/professional.jpg";
 import { Contact } from "../widgets/Contact";
-import chartSimpleSolid from "../assets/icons/chartSimpleSolid.svg";
+import reactJs from "../assets/icons/reactJs.png";
+import nodeJs from "../assets/icons/nodeJs.png";
+import laravel from "../assets/icons/laravel.png";
 
 
 
@@ -38,28 +40,28 @@ export function Techno () {
 
                     <div className="value-bx">
 
-                        <img src={chartSimpleSolid} alt="equité" className="value-item" />
+                        <img src={reactJs} alt="equité" className="value-item" />
                         <span>React JS</span>
 
                     </div>
 
                     <div className="value-bx">
 
-                         <img src={chartSimpleSolid} alt="respect" className="value-item" />
+                         <img src={nodeJs} alt="respect" className="value-item" />
                          <span>Node JS</span>
 
                     </div>
 
                     <div className="value-bx">
 
-                         <img src={chartSimpleSolid} alt="excellence" className="value-item" />
+                         <img src={laravel} alt="excellence" className="value-item" />
                          <span>Laravel</span>
 
                     </div>
 
                      <div className="value-bx">
 
-                         <img src={chartSimpleSolid} alt="excellence" className="value-item" />
+                         <img src={reactJs} alt="excellence" className="value-item" />
                          <span>React Native</span>
 
                     </div>
