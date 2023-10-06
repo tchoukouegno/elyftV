@@ -92,6 +92,8 @@ export function Contact () {
 
             <div className="footer-text">
 
+                <div className="logo-text" id="logo-color">LOGO</div>
+
                 <p >Elyft est une entreprise de création de produit numérique basée en France qui s'associe
                     à des propriètaire de PME pour transformer leurs entreprises et leurs relations avec leurs
                     cleints grace aux technologies numériques. Nous sommes convaincus que des technologies adéquates 
@@ -108,7 +110,6 @@ export function Contact () {
                             <li>SERVICES</li>
                             <li>TECHNOLOGIES</li>
                             <li>A PROPOS</li>
-                            <li>BLOG</li>
 
                         </ul>
 
@@ -138,6 +139,8 @@ export function Contact () {
                     <img src={instagram} alt="icon instagram" className="insta"/>
 
                 </div>
+
+                <span className="mention">Mention Légal</span>
 
                 
 
