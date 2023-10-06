@@ -980,8 +980,8 @@ input:focus {
     font-weight: bold;
     text-align: center;
     display: block;
-    padding-top: 20px;
-    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
 
 }
 
