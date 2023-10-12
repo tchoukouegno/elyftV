@@ -939,7 +939,9 @@ input:focus {
     position: absolute;
     color: #FFFFFF;
     font-size: 1.5rem;
-    top: -17vh;
+    top: 62%;
+    left: 13%;
+    z-index: 5;
     width: 700px;
 
 }

@@ -79,10 +79,9 @@ export function Header({pageTitle, srcImg, headerDescription, textUp, active, ac
             </div>
 
             <h1 className="home-title">{pageTitle}</h1>
+            <span className="header-text-description" id={textUp}>{headerDescription}</span>
             
             <div className="header-contact">
-
-                <span className="header-text-description" id={textUp}>{headerDescription}</span>
 
                 <a className="btn-contact" href="#contact">Nous Contactez</a>
 
