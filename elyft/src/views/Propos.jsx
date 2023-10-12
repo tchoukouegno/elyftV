@@ -6,7 +6,8 @@ import humanCenter from "../assets/icons/humanCenter.png";
 import technology from "../assets/icons/technology.png";
 import icons8BalanceScale from "../assets/icons/icons8BalanceScale.png";
 import authentic from "../assets/icons/authentic.png";
-
+import developer1 from "../assets/img/developer1.jpg";
+import developer2 from "../assets/img/developer2.jpg";
 
 
 
@@ -75,14 +76,14 @@ export function Propos () {
 
                     <div className="person-name">
 
-                        <div className="img-person"></div>
+                        <img src={developer1} className="img-person"/>
                         <span>prénom nom</span>
 
                     </div>
 
                     <div className="person-name">
 
-                        <div className="img-person"></div>
+                        <img src={developer2} className="img-person"/>
                         <span>prénom nom</span>
 
                     </div>
