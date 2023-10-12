@@ -708,7 +708,7 @@ a {
     border-radius: 5px;
     height: 30px;
     border: 1px solid #A5A5A5;
-    padding-left: 5px;
+    padding-left: 10px;
     margin-bottom: 10px;
     /* background-color: red; */
     
@@ -939,7 +939,7 @@ input:focus {
     position: absolute;
     color: #FFFFFF;
     font-size: 1.5rem;
-    top: -125px;
+    top: -230%;
     width: 700px;
 
 }
