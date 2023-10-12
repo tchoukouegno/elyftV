@@ -939,7 +939,7 @@ input:focus {
     position: absolute;
     color: #FFFFFF;
     font-size: 1.5rem;
-    top: -230%;
+    top: -17vh;
     width: 700px;
 
 }
