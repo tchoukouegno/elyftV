@@ -112,6 +112,12 @@ html,body {
 
 }
 
+.nav-bar .multi-langue:hover {
+
+    background-color:transparent;
+
+}
+
 .active, .activeServices, .activeTech, .activePropos, .activeBlog {
 
     background-color: var(--main-color-) !important; 
@@ -892,6 +898,40 @@ input:focus {
 
 }
 
+.chevron-down {
+
+    height: 13px;
+    width: 13px;
+
+}
+
+.multi-langue {
+
+    border: 1px solid var(--main-color-);
+    
+   
+}
+
+.hidden {
+
+    display: none;
+
+}
+
+
+.change-language {
+
+    padding: 13px;
+    background-color: var(--main-color-);
+    position: absolute;
+    right: 7%;
+    top: -23%;
+    cursor: pointer;
+    z-index: 7;
+    display: block;
+
+}
+
 .social-media img {
 
     height: 20px;
@@ -921,7 +961,7 @@ input:focus {
     background-color: var(--main-color-);
     height: 20px;
     width: 20px;
-    border-radius: 50%;
+    border-radius: 2px;
 
 }
 

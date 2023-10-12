@@ -5,6 +5,8 @@ import linkedin from "../assets/icons/linkedin.svg";
 import facebook from "../assets/icons/facebook.svg";
 import instagram from "../assets/icons/instagram.svg";
 import {useNavigate} from "react-router-dom";
+import chevronDownSolid from "../assets/icons/chevronDownSolid.svg";
+import { useState } from 'react';
 
 
 
@@ -12,10 +14,17 @@ import {useNavigate} from "react-router-dom";
 
 
 
-export function Header({pageTitle, srcImg, headerDescription, textUp, active, activeServices, activeTech, activePropos, activeBlog}) {
+export function Header({pageTitle, srcImg, headerDescription, textUp, active, activeServices, activeTech, activePropos, ancre, activeBlog}) {
 
 
     let navigate = useNavigate();
+
+    const[change, setIsChange]=useState(false);
+
+    const[language, setLanguage] = useState("Français");
+
+    const[other, setOther]= useState("Anglais")
+
 
     const handleHome = ()=>{
 
@@ -47,6 +56,30 @@ export function Header({pageTitle, srcImg, headerDescription, textUp, active, ac
 
     }
 
+    const handleChange = ()=>{
+
+      return  setIsChange(!change);
+
+    }
+
+    const handleOtherLanguage = ()=>{
+
+        if(other === "French") {
+
+            setOther("Anglais")
+
+            return setLanguage("Français"), setIsChange(false);
+
+        }
+
+
+        setLanguage("English");
+
+        setOther("French");
+
+        return setIsChange(false);
+
+    }
 
 
 
@@ -67,12 +100,15 @@ export function Header({pageTitle, srcImg, headerDescription, textUp, active, ac
 
                     <ul className="nav-bar">
                         <li className={active}><a onClick={handleHome}>ACCUEIL</a></li>
-                        <li className={activeServices}><a onClick={handleServices}>SERVICES</a></li>
+                        <li className={activeServices}><a onClick={handleServices} id={ancre}>SERVICES</a></li>
                         <li className={activeTech} onClick={handleTechno}>TECHNOLOGIES</li>
                         <li className={activePropos} onClick={handlePropos}>A PROPOS</li>
-                        {/* <li className={activeBlog} onClick={handleBlog}>BLOG</li> */}
+                        <li className="multi-langue" id="multi-langue" onClick={handleChange}>{language} <img src={chevronDownSolid} className="chevron-down"/></li>
+                        
 
                     </ul>
+
+                    <span onClick={handleOtherLanguage} className={change === true ?"change-language": "hidden"}>{other}</span>
 
                 </nav>
 

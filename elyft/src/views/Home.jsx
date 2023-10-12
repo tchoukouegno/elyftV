@@ -8,7 +8,7 @@ import chevronRight from "../assets/icons/chevronRight.svg";
 import usersSolid from "../assets/icons/usersSolid.svg";
 import trophySolid from "../assets/icons/trophySolid.svg"
 import { Contact } from "../widgets/Contact";
-import {useNavigate} from "react-router-dom";
+import {useNavigate,} from "react-router-dom";
 import homeHeader from "../assets/img/homeHeader.jpg";
 import icons8BalanceScale from "../assets/icons/icons8BalanceScale.png";
 import icons8Respect from "../assets/icons/icons8Respect.png";
@@ -167,6 +167,8 @@ export function Home() {
                     <div className="slider-indicator">
 
                         <span>...</span>
+
+                        
 
                         <button onClick={handleServices} className="services">Voir les services</button>
 
