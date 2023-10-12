@@ -41,14 +41,14 @@ export function Contact () {
                         <div className="form-item">
 
                             <label htmlFor="first_name">Nom*</label>
-                            <input className="input-form" placeholder="jean"/>
+                            <input className="input-form" placeholder="Saturo"/>
 
                         </div>
 
                         <div className="form-item">
 
                             <label htmlFor="last_name">Prénom*</label>
-                            <input  className="input-form" placeholder="laporte"/>
+                            <input  className="input-form" placeholder="Gojo"/>
 
                         </div>
 
@@ -59,7 +59,7 @@ export function Contact () {
                         <div className="form-item">
 
                             <label htmlFor="email">Email*</label>
-                            <input  className="input-form" placeholder="jl@gmail.com"/>
+                            <input  className="input-form" placeholder="saturo@gmail.com"/>
 
                         </div>
 
@@ -74,9 +74,8 @@ export function Contact () {
 
                     <div className="form-item">
 
-                        <label htmlFor="need">Votre besoin*</label>
-                        <input  className="input-form" id="need"/>
-                        
+                        <label htmlFor="need">Votre besoin*</label>                       
+                        <textarea id="message"></textarea>       
 
                     </div>
 

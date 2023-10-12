@@ -710,12 +710,13 @@ a {
     border: 1px solid #A5A5A5;
     padding-left: 5px;
     margin-bottom: 10px;
+    /* background-color: red; */
     
 }
 
 .form-items {
 
-   /* background-color: red; */
+   /* background-color:rebeccapurple; */
    height: 400px;
    position: relative;
 
@@ -727,11 +728,21 @@ input:focus {
     transition: 400ms ease-in-out;
 }
 
-#need {
+#message:focus {
+
+    outline: 2px solid var(--main-color-);
+    transition: 400ms ease-in-out;
+}
+
+
+
+#message {
 
     height: 80px;
     width: 100%;
-    margin-bottom: 25px;
+    border: 1px solid #A5A5A5;
+    border-radius: 5px;
+    /* background-color: rebeccapurple; */
 
 }
   
