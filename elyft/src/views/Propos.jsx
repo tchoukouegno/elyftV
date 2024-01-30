@@ -19,7 +19,7 @@ export function Propos () {
 
         <>
         
-            <Header pageTitle="A propos de Elyft" srcImg={pexelsPropos} headerDescription="Depuis 2022, nous accompagnons les entreprises et leurs propriétaires en Afrique
+            <Header pageTitle="Notre engagement envers la qualité des services fournis" srcImg={pexelsPropos} headerDescription="Depuis 2022, nous accompagnons les entreprises et leurs propriétaires en Afrique
             et en occident en construisant des applications qui boostent leurs croissances, créent de la proximité avec leurs collaborteurs
             et clients et améliorent l'expérience client et utilisateur." textUp="text-translate" activePropos="activePropos" />
 

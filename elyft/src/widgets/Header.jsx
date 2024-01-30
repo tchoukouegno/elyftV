@@ -1,5 +1,5 @@
 
-import LogoElyft from "../assets/logo/LogoElyft.jpg"
+import LogoElyft from "../assets/logo/LogoElyft.png";
 import "../styles/home.css";
 import linkedin from "../assets/icons/linkedin.svg";
 import facebook from "../assets/icons/facebook.svg";
@@ -93,8 +93,8 @@ export function Header({pageTitle, srcImg, headerDescription, textUp, active, ac
 
             <div className="nav-bar-content">
 
-                {/* <img src={LogoElyft} alt="logo-elyft" className="logo"/> */}
-                <div onClick={handleHome} className="logo-text">LOGO</div>
+                <img src={LogoElyft} alt="logo-elyft" onClick={handleHome} className="logo"/>
+               
 
                 <nav>
 
@@ -115,11 +115,11 @@ export function Header({pageTitle, srcImg, headerDescription, textUp, active, ac
             </div>
 
             <h1 className="home-title">{pageTitle}</h1>
-            <span className="header-text-description" id={textUp}>{headerDescription}</span>
+            {/* <span className="header-text-description" id={textUp}>{headerDescription}</span> */}
             
             <div className="header-contact">
 
-                <a className="btn-contact" href="#contact">Nous Contactez</a>
+                <a className="btn-contact" href="#contact">CONTACTEZ-NOUS</a>
 
                 <div className="social-media">
 
