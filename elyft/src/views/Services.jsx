@@ -8,6 +8,7 @@ import appPerso from "../assets/img/appPerso.svg";
 import product from "../assets/img/product.svg";
 import marketing from "../assets/img/marketing.jpg";
 import ui from "../assets/img/ui.jpg";
+import { useState, useEffect } from "react";
 
 
 
@@ -23,6 +24,25 @@ export function Services () {
 
     let navigate = useNavigate();
 
+    
+    const[change, setIsChange]=useState(false);
+
+    const[language, setLanguage] = useState("Français");
+
+    const[other, setOther]= useState("Anglais");
+
+    useEffect(()=>{
+
+        const  languageSelected = localStorage.getItem("languageSelected");
+
+        if(languageSelected === "English") {
+
+            return  setLanguage("English"), setOther("French");
+
+        }
+
+    },[]);
+
     const handleDetails = ()=>{
 
         return navigate('/services/detail');
@@ -30,23 +50,57 @@ export function Services () {
 
     }
 
+    const handleOtherLanguage = ()=>{
+
+        if(other === "French") {
+
+            setOther("Anglais");
+
+            localStorage.setItem("languageSelected", "Français");
+            
+            return setLanguage("Français"), setIsChange(false);
+
+        }
+
+
+        setLanguage("English");
+
+        localStorage.setItem("languageSelected", "English");
+
+        setOther("French");
+
+        return setIsChange(false);
+
+    }
+
+    const handleChange = ()=>{
+
+        return  setIsChange(!change);
+  
+      }
+
+    const arryServices = [{service:"Application mobile"},{service:"Application Web"}, {service:"site Web"}, {service:"Logiciel sur mesure"},
+      {service:"Community Management "}, {service:"Référencement SEO"},]
+
+      const arryServicesEnglish = [{service:"Mobile application"},{service:"Web application"}, {service:"Website"}, {service:"Custom software"},
+      {service:"Community Management "}, {service:"SEO Search Engine"}, {service:"Optimization"}]
+
+
 
     return (
 
 
         <>
-        
-            <Header pageTitle="Développement de logiciels personnalisés" srcImg={pexelsFauxels} headerDescription="Réimaginez Votre business avec des technologies sur-mesure, améliorer l'expérience client" activeServices="activeServices" ancre="services" />
+
+            <Header pageTitle= {language === "English" ? "Custom software development" : "Développement de logiciels personnalisés" } contact={language === "English" ? "CONTACT US" : "CONTACTEZ-NOUS" }  srcImg={pexelsFauxels} activeServices="activeServices" handleChange={handleChange} language={language} handleOtherLanguage={handleOtherLanguage} change={change} other={other} 
+        accueil= {language === "English" ? "HOME" : "ACCUEIL"}  propos={language === "English" ? "ABOUT US" : "A PROPOS"} />
 
                <section className="body-content">
 
-                    <span className="section-title">NOS Services</span>
-                    <h2 className="sub-section-title">Nous Pouvons Vous Aider</h2> 
+                    <h2 className="section-title">{language === "English" ? "Commitment to the quality of our IT services" : "Engagement envers la qualité de nos prestations informatiques"}</h2>
+                    <h3 className="sub-section-title">{language === "English" ? "The solutions we offer" : "Les solutions que nous vous offrons"}</h3> 
 
-                    <p className="value-txt">Vous cherchez peut-etre à mettre sur pied une nouvelle solution numérique pour vous rapprocher de vos clients,
-                        ou a construire une technologie pour soutenir votre entreprise? Nous sommes là pour vous aider. Du developement d'une application mobile
-                        à la refonte.
-                    </p>
+                    <p className="value-txt">{language === "English" ? "Through the various digital solutions we design, you can get closer to your customers, understand them better, identify their needs, interact with them, increase their commitment and build loyalty." : "À travers les différentes solutions digitales que nous concevons, vous avez la possibilité de renforcer votre proximité avec vos clients, de mieux les comprendre, de cerner leurs besoins, d’interagir avec eux, d’augmenter leur engagement et de les fidéliser."}</p>
 
                     <div className="card-items">
 
@@ -54,12 +108,11 @@ export function Services () {
 
                             <img src={appdev} className="card-img"/>
 
-                            <span className="card-title">Développement D'Appli Mobile</span>
+                            <h2 className="card-title">{language === "English" ? "mobile Applications" : "applications mobiles"}</h2>
 
-                            <span className="card-text">Une application web intuitive et conviviale peut aider votre équipe à devenir plus éfficace, stimuler l'engagement
-                            des utilisateurs, vous différencier de la concurrence, et bien plus encore...  </span>
+                            <span className="card-text">{language === "English" ? "" : ""}Les applications mobiles ont révolutionné la manière dont nous interagissons avec la technologie en nous offrant un accès rapide et personnalisé à une vaste gamme de services, et de fonctionnalités adaptées à nos besoins individuels.  </span>
 
-                            <span className="plus" onClick={handleDetails}>En savoir plus</span>
+                            <span className="plus" onClick={handleDetails}>{language === "English" ? "Read more" : "En savoir plus"}</span>
 
                         </div>
 
@@ -67,12 +120,11 @@ export function Services () {
 
                             <img src={webapp} className="card-img"/>
 
-                            <span className="card-title">Développement D'Appli Web</span>
+                            <h2 className="card-title">{language === "English" ? "web Applications" : "application web"}</h2>
 
-                            <span className="card-text">Créez des applications mobiles et des sites web adaptés aux appareils avec lesquels nous interagissons le plus.
-                            Notre approche unique permet de commercialiser votre application en 50% moins de temps que les autres agences...</span>
+                            <span className="card-text">{language === "English" ? "" : ""}Une application web est un logiciel ou un service accessible via un navigateur internet, offrant diverses fonctionnalités et services sans nécessiter de téléchargement ou d’installation sur l’appareil de l’utilisateur.</span>
 
-                            <span className="plus">En savoir plus</span>
+                            <span className="plus">{language === "English" ? "Read more" : "En savoir plus"}</span>
 
                         </div>
 
@@ -80,12 +132,11 @@ export function Services () {
 
                             <img src={appPerso} className="card-img"/>
 
-                            <span className="card-title">Logiciels Personnalisés</span>
+                            <h2 className="card-title">{language === "English" ? "webSites" : "sites web"}</h2>
 
-                            <span className="card-text">Notre équipe utilise la conception centrée sur l'humain pour donné vie à votre vision, en s'appuyant
-                            sur la recherche, les parcours clients, les wireframes, le développement de guides de style, et bien plus encore...  </span>
+                            <span className="card-text">{language === "English" ? "" : ""}Un site web est un allié de choix pour une entreprise. En effet il lui apporte une présence en ligne, une visibilité accrue, une facilité de communication et la possibilité de générer des revenus, tout en renforçant la crédibilité et la confiance des clients.</span>
 
-                            <span className="plus">En savoir plus</span>
+                            <span className="plus">{language === "English" ? "Read more" : "En savoir plus"}</span>
 
                         </div>
 
@@ -93,12 +144,11 @@ export function Services () {
 
                             <img src={product} className="card-img"/>
 
-                            <span className="card-title">Stratégie de Produit</span>
+                            <h2 className="card-title">{language === "English" ? "Custom software" : "logiciels sur mesure"} </h2>
 
-                            <span className="card-text">Une stratégie déterminante pour le succès de votre produit. Notre équipe vous aide à construire  
-                            un produit qui sera adopté par votre cible... </span>
+                            <span className="card-text">{language === "English" ? "" : ""}Un logiciel sur mesure est un logiciel développé spécifiquement pour répondre à des besoins particuliers d’une entreprise ou d’un individu. Contrairement aux logiciels prêts à l’emploi disponibles sur le marché, les logiciels sur mesure sont conçus en tenant compte des besoins précis et des spécifications uniques de l’utilisateur final</span>
 
-                            <span className="plus">En savoir plus</span>
+                            <span className="plus">{language === "English" ? "Read more" : "En savoir plus"}</span>
 
                         </div>
 
@@ -107,12 +157,11 @@ export function Services () {
 
                             <img src={marketing} className="card-img"/>
 
-                            <span className="card-title">Stratégie de Marketing </span>
+                            <h2 className="card-title">community management</h2>
 
-                            <span className="card-text">Créez des applications mobiles et des sites web adaptés aux appareils avec lesquels nous interagissons le plus.
-                            Notre approche unique permet de commercialiser votre application en 50% moins de temps que les autres agences... </span>
+                            <span className="card-text">{language === "English" ? "" : ""}L’objectif principal du référencement SEO (Search Engine Optimization) est d’augmenter la quantité et la qualité du trafic vers un site web en augmentant sa visibilité pour les utilisateurs effectuant des recherches pertinentes sur des moteurs de recherche comme Google, Bing, Yahoo, etc.</span>
 
-                            <span className="plus">En savoir plus</span>
+                            <span className="plus">{language === "English" ? "Read more" : "En savoir plus"}</span>
 
                         </div>
 
@@ -120,12 +169,12 @@ export function Services () {
 
                             <img src={ui} className="card-img"/>
 
-                            <span className="card-title">UX/UI Design</span>
+                            <h2 className="card-title">{language === "English" ? "SEO referencing" : "référencement seo"}</h2>
 
-                            <span className="card-text">Notre équipe utilise la conception centrée sur l'humain pour donné vie à votre vision, en s'appuyant
+                            <span className="card-text">{language === "English" ? "" : ""}Notre équipe utilise la conception centrée sur l'humain pour donné vie à votre vision, en s'appuyant
                             sur la recherche, les parcours clients, les wireframes, le développement de guides de style, et bien plus encore...   </span>
 
-                            <span className="plus">En savoir plus</span>
+                            <span className="plus">{language === "English" ? "Read more" : "En savoir plus"}</span>
 
                         </div>
 
@@ -135,8 +184,11 @@ export function Services () {
                
               
 
-            <Contact/>
-        
+               <Contact arryServices= {language === "English" ? arryServicesEnglish  : arryServices } textContact={language === "English" ? "Do you have a project to complete, questions about our rates, suggestions or any other concerns, questions or requests? Leave us a message and we'll get back to you within 24 hours." : "Vous avez un projet à réaliser, des questions sur nos tarifs, des suggestions ou toute préoccupation, question ou demande? Laissez-nous un message, nous vous répondons sous 24 heures."} nom ={language === "English" ? "Name*" : "Nom*"} prenom={language === "English" ? "First name" : "Prénom*"}  telephone={language === "English" ? "Phone" : "Téléphone*"} interest={language === "English" ? "The service you're interested in*" : "Le service qui vous interesse*"} need={language === "English" ? "Your needs*" : "Votre besoin*"} send={language === "English" ? "SEND MESSAGE" : "Envoyer"}  
+            textFooter1= {language === "English" ? "Take the plunge into the digital world! Why should you? Because betting on digital technology is a sure-fire way to win." : "Franchissez le pas, faites le grand saut dans l’univers du numérique! Pourquoi? Parce que parier sur le numérique c’est gagner à coup sûr."}
+            textFooter2= {language === "English" ? "At ELYFT, we believe in one thing: technology has the power to facilitate and improve the quality of your processes in every aspect of your business. We work with you to design solutions that meet your real needs. Tailor-made, innovative solutions to make your life easier" : "Chez ELYFT nous croyons en une chose : la technologie a le pouvoir de faciliter, d’améliorer la qualité de vos processus dans tous les aspects de votre activité. Nous vous accompagnons dans la conception de solutions répondant à vos besoins réels. Des solutions sur mesure et innovantes qui vous faciliterons la vie"}
+            mention= {language === "English" ? "Legal Notice" : "Mentions Légales"} adress={ language === "English" ? "Address" : "Adresse"} reservation={language === "English" ? "BOOK AN INTERVIEW"  : "Réserver une entrevue"}
+            accueil= {language === "English" ? "HOME" : "ACCUEIL"}  propos={language === "English" ? "ABOUT US" : "A PROPOS"}/>
         
             {/* <Outlet/> */}
         

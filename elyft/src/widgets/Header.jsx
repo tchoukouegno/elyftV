@@ -7,6 +7,7 @@ import instagram from "../assets/icons/instagram.svg";
 import {useNavigate} from "react-router-dom";
 import chevronDownSolid from "../assets/icons/chevronDownSolid.svg";
 import { useState } from 'react';
+import barsSolid from "../assets/icons/barsSolid.svg";
 
 
 
@@ -14,17 +15,16 @@ import { useState } from 'react';
 
 
 
-export function Header({pageTitle, srcImg, headerDescription, textUp, active, activeServices, activeTech, activePropos, ancre, activeBlog}) {
+export function Header({pageTitle, contact, srcImg, headerDescription, textUp, active, activeServices, activeTech, activePropos, ancre, handleChange, language, handleOtherLanguage, change, other, accueil, propos}) {
 
 
     let navigate = useNavigate();
 
-    const[change, setIsChange]=useState(false);
+    
 
-    const[language, setLanguage] = useState("Français");
+    const[menuBar, setIsmenuBar]=useState(false);
 
-    const[other, setOther]= useState("Anglais")
-
+  
 
     const handleHome = ()=>{
 
@@ -52,32 +52,18 @@ export function Header({pageTitle, srcImg, headerDescription, textUp, active, ac
 
     const handleServices = ()=>{
 
+
         return navigate('/services');
 
     }
 
-    const handleChange = ()=>{
+    
 
-      return  setIsChange(!change);
+   
 
-    }
+    const handleMenu = ()=>{
 
-    const handleOtherLanguage = ()=>{
-
-        if(other === "French") {
-
-            setOther("Anglais")
-
-            return setLanguage("Français"), setIsChange(false);
-
-        }
-
-
-        setLanguage("English");
-
-        setOther("French");
-
-        return setIsChange(false);
+        setIsmenuBar(!menuBar);
 
     }
 
@@ -94,12 +80,14 @@ export function Header({pageTitle, srcImg, headerDescription, textUp, active, ac
             <div className="nav-bar-content">
 
                 <img src={LogoElyft} alt="logo-elyft" onClick={handleHome} className="logo"/>
+                <img src={barsSolid} alt="menu bars" onClick={handleMenu} className="menu-bars"/>
                
+                {menuBar === true ? 
 
-                <nav>
+                <nav >
 
                     <ul className="nav-bar">
-                        <li className={active}><a onClick={handleHome}>ACCUEIL</a></li>
+                        <li className={active}><a onClick={handleHome}>{}ACCUEIL</a></li>
                         <li className={activeServices}><a onClick={handleServices} id={ancre}>SERVICES</a></li>
                         <li className={activeTech} onClick={handleTechno}>TECHNOLOGIES</li>
                         <li className={activePropos} onClick={handlePropos}>A PROPOS</li>
@@ -112,6 +100,27 @@ export function Header({pageTitle, srcImg, headerDescription, textUp, active, ac
 
                 </nav>
 
+                :
+                
+                <nav className="desktop-version">
+
+                    <ul className="nav-bar">
+                        <li className={active}><a onClick={handleHome}>{accueil}</a></li>
+                        <li className={activeServices}><a onClick={handleServices} id={ancre}>SERVICES</a></li>
+                        <li className={activeTech} onClick={handleTechno}>TECHNOLOGIES</li>
+                        <li className={activePropos} onClick={handlePropos}>{propos}</li>
+                        <li className="multi-langue" id="multi-langue" onClick={handleChange}>{language} <img src={chevronDownSolid} className="chevron-down"/></li>
+                        
+
+                    </ul>
+
+                    <span onClick={handleOtherLanguage} className={change === true ?"change-language": "hidden"}>{other}</span>
+
+                </nav>}
+
+
+                
+
             </div>
 
             <h1 className="home-title">{pageTitle}</h1>
@@ -119,7 +128,7 @@ export function Header({pageTitle, srcImg, headerDescription, textUp, active, ac
             
             <div className="header-contact">
 
-                <a className="btn-contact" href="#contact">CONTACTEZ-NOUS</a>
+                <a className="btn-contact" href="#contact">{contact}</a>
 
                 <div className="social-media">
 

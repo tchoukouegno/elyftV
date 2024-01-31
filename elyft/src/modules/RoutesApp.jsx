@@ -11,7 +11,7 @@ import { Services } from '../views/Services';
 import { Techno } from '../views/Techno';
 import { Propos } from '../views/Propos';
 import { Blog } from '../views/Blog';
-import { ServiceDetail } from '../widgets/ServiceDetail';
+import { ServiceDetail } from '../views/ServiceDetail';
 
 
 

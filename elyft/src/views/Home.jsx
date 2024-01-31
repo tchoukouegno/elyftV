@@ -48,9 +48,27 @@ export function Home() {
 
     const [slidePost, setSlidePost] = useState(0);
 
+    const[change, setIsChange]=useState(false);
+
+    const[language, setLanguage] = useState("Français");
+
+    const[other, setOther]= useState("Anglais");
+
+
     const [isInitialPosition, setIsInitialPosition] = useState(true)
 
+ 
+
     useEffect(() => {
+
+        const  languageSelected = localStorage.getItem("languageSelected");
+
+        if(languageSelected === "English") {
+
+            return  setLanguage("English"), setOther("French");
+
+        }
+
         const interval = setInterval(() => {
 
 
@@ -100,6 +118,40 @@ export function Home() {
 
     }
 
+    const handleOtherLanguage = ()=>{
+
+        if(other === "French") {
+
+            setOther("Anglais");  
+            
+            localStorage.setItem("languageSelected", "Français");
+
+            return setLanguage("Français"), setIsChange(false);
+
+        }
+
+        setLanguage("English");
+
+        localStorage.setItem("languageSelected", "English");
+
+        setOther("French");
+
+        return setIsChange(false);
+
+    }
+
+    const handleChange = ()=>{
+
+        return  setIsChange(!change);
+  
+      }
+
+    const arryServices = [{service:"Application mobile"},{service:"Application Web"}, {service:"site Web"}, {service:"Logiciel sur mesure"},
+      {service:"Community Management "}, {service:"Référencement SEO"},]
+
+      const arryServicesEnglish = [{service:"Mobile application"},{service:"Web application"}, {service:"Website"}, {service:"Custom software"},
+      {service:"Community Management "}, {service:"SEO Search Engine"}, {service:"Optimization"}]
+
     return(
 
 
@@ -108,15 +160,16 @@ export function Home() {
        
         
         
-        <Header pageTitle="DEVELOPPEMENT D’APPLICATIONS MOBILES POUR ANDROID ET IOS" srcImg={homeHeader} active="active" />
+        <Header pageTitle= {language === "English" ? "MOBILE APPLICATION DEVELOPMENT FOR ANDROID AND IOS" : "DEVELOPPEMENT D’APPLICATIONS MOBILES POUR ANDROID ET IOS" } contact={language === "English" ? "CONTACT US" : "CONTACTEZ-NOUS" }  srcImg={homeHeader} active="active" handleChange={handleChange} language={language} handleOtherLanguage={handleOtherLanguage} change={change} other={other} 
+        accueil= {language === "English" ? "HOME" : "ACCUEIL"}  propos={language === "English" ? "ABOUT US" : "A PROPOS"}/>
 
-        <div className="bloc-page">
+         <div className="bloc-page">
 
-            <section className="body-content">
+           <section className="body-content">
 
-                <h2>Des solutions digitales qui vous facilitent la vie</h2>
+                <h2>{language === "English" ? "Digital solutions that make your life easier" : "Des solutions digitales qui vous facilitent la vie"}</h2>
 
-                <p>Les logiciels personnalisés sont devenus incontournables dans un monde tourné vers le numérique et concurrentiel</p>
+                <p>{language === "English" ? "Custom software has become essential in today's competitive, digitally-oriented world." : "Les logiciels personnalisés sont devenus incontournables dans un monde tourné vers le numérique et concurrentiel"}</p>
 
                 <div className="help-customer-content">
 
@@ -125,21 +178,21 @@ export function Home() {
                         <div className="help-customer">
 
                             <img src={chartSimpleSolid} alt="icon-illustrator" className="icon-illustrator"/>
-                            <span>Conception de logiciels professionnels et personnalisés</span>
+                            <span>{language === "English" ? "Professional and customized software design" : "Conception de logiciels professionnels et personnalisés"}</span>
 
                         </div>
 
                         <div className="help-customer">
 
                             <img src={usersSolid} alt="icon-illustrator" className="icon-illustrator"/>
-                            <span>Approche axée sur le client pour des solutions sur mesure</span>
+                            <span>{language === "English" ? "Customer-focused approach for tailor-made solutions" : "Approche axée sur le client pour des solutions sur mesure"}</span>
 
                         </div>
 
                         <div className="help-customer">
 
                             <img src={trophySolid} alt="icon-illustrator" className="icon-illustrator"/>
-                            <span>Equipe hautement qualifiée et expérimentée</span>
+                            <span>{language === "English" ? "Highly qualified and experienced team" : "Equipe hautement qualifiée et expérimentée"}</span>
 
                         </div>
 
@@ -148,39 +201,46 @@ export function Home() {
                     <div className="proximity-customer">
 
                         <img src={yougCoupleWork} alt="proximity-customer" />
-                        <span>Gagnez de la notoriété, prenez de l’avance sur vos concurrents !</span>
+                        <span>{language === "English" ? "Gain notoriety, get ahead of your competitors!" : "Gagnez de la notoriété, prenez de l’avance sur vos concurrents !"}</span>
                         <div className="filtre"></div>
 
                     </div>
 
                 </div>
-
+       
                 <>
-                    <h2 className="section-title">Innovation constante dans nos solutions informatiques</h2> 
-                    <span className="sub-section-title">Ce qui nous animes</span>   
-                    <p className="value-txt">Vous simplifier la vie, vous fournir une prestation digitale dont vous serez fier(e). Bref, vous rendre le digital simple et accessible. Chez ELYFT nous faisons du bon travail, et nous y mettons du coeur. Cet engagement dans la qualité et l’innovation, nous pousse à concevoir des solutions logicielles sur mesure.</p>
-                    <p className="value-txt">Mettre l’humain au centre de nos activités, c’est ce qui nous permet de batir des relations de confiance avec nos clients. Les aider à développer une présence en ligne enviée par leurs concurrents</p>         
+                    <h2 className="section-title">{language === "English" ? "Constant innovation in our IT solutions" : "Innovation constante dans nos solutions informatiques"}</h2> 
+
+                    <div className="sub-section">
+
+                        <h3 className="sub-section-title">{language === "English" ? "What drives us" : "Ce qui nous animes"}</h3> 
+                        <span className="sub-section-underline"></span>  
+
+                    </div>
+
+                    <p className="value-txt">{language === "English" ? "To simplify your life and provide you with a digital service you'll be proud of. In short, to make digital simple and accessible. At ELYFT, we do good work, and we put our hearts into it. This commitment to quality and innovation drives us to design tailor-made software solutions." : "Vous simplifier la vie, vous fournir une prestation digitale dont vous serez fier(e). Bref, vous rendre le digital simple et accessible. Chez ELYFT nous faisons du bon travail, et nous y mettons du coeur. Cet engagement dans la qualité et l’innovation, nous pousse à concevoir des solutions logicielles sur mesure."}</p>
+                    <p className="value-txt">{language === "English" ? "Putting people at the heart of what we do is what enables us to build trusting relationships with our customers. Helping them develop an online presence envied by their competitors." : "Mettre l’humain au centre de nos activités, c’est ce qui nous permet de batir des relations de confiance avec nos clients. Les aider à développer une présence en ligne enviée par leurs concurrents"}</p>         
                 
                     <div className="values-items">
 
                         <div className="value-bx">
 
                             <img src={icons8BalanceScale} alt="equité" className="value-item" />
-                            <span>Réactivité</span>
+                            <span>{language === "English" ? "responsiveness" : "Réactivité"}</span>
 
                         </div>
 
                         <div className="value-bx">
 
                             <img src={icons8Respect} alt="respect" className="value-item" />
-                            <span>Innovation</span>
+                            <span>{language === "English" ? "Innovation" : "Innovation"}</span>
 
                         </div>
 
                         <div className="value-bx">
 
                             <img src={icons8GraduationCap} alt="excellence" className="value-item" />
-                            <span>Qualité</span>
+                            <span>{language === "English" ? "Quality" : "Qualité"}</span>
 
                         </div>
 
@@ -190,37 +250,44 @@ export function Home() {
 
                 <>
                 
-                    <h2 className="section-title" id="services">Formation et développement continu des compétences</h2>
-                    <span className="sub-section-title">Ce que nous proposons</span> 
-                    <p className="description">Rien n’est prévu à l’avance, nous nous adaptons à vous, à votre problématique, à votre besoin. L’objectif est de vous fournir une solution digitale adaptée à votre situation, facile à prendre en main et qui apporte une plus-value à votre entreprise.</p>  
+                    <h2 className="section-title" id="services">{language === "English" ? "Training and continuous skills development" : "Formation et développement continu des compétences"}</h2>
+
+                    <div className="sub-section">
+
+                        <h3 className="sub-section-title">{language === "English" ? "What we offer" : "Ce que nous proposons"}</h3> 
+                        <span className="sub-section-underline"></span>
+
+                    </div>
+
+                    <p className="description">{language === "English" ? "Nothing is planned in advance : we adapt to you, your issues and your needs. Our aim is to provide you with a digital solution that's adapted to your situation, easy to use and that adds value to your business." : "Rien n’est prévu à l’avance, nous nous adaptons à vous, à votre problématique, à votre besoin. L’objectif est de vous fournir une solution digitale adaptée à votre situation, facile à prendre en main et qui apporte une plus-value à votre entreprise."}</p>  
                 
-                <div className="values-items">
+                    <div className="values-items">
 
                         <div className="service">
 
                             <img src={icons8Android} alt="application mobile" className="value-item" />
-                            <h3>Application Mobile</h3>
+                            <h3>{language === "English" ? "mobile Applications" : "Application Mobile"}</h3>
 
                         </div>
 
                         <div className="service">
 
                             <img src={icons8WebSite} alt="application web" className="value-item" />
-                            <h3>Application web</h3>
+                            <h3>{language === "English" ? "web Applications" : "Application web"}</h3>
 
                         </div>
 
                         <div className="service">
 
                             <img src={icons8ImacSettings} alt="excellence" className="value-item" />
-                            <h3>Logiciel sur mesure</h3>
+                            <h3>{language === "English" ? "custom software" : "Logiciel sur mesure"}</h3>
 
                         </div>
 
                         <div className="service">
 
                             <img src={icons8Design} alt="excellence" className="value-item" />
-                            <h3>site web</h3>
+                            <h3>{language === "English" ? "websites" : "site web"}</h3>
 
                         </div>
 
@@ -229,11 +296,7 @@ export function Home() {
                     
                     <div className="slider-indicator">
 
-                        {/* <span>...</span> */}
-
-                        
-
-                        <button onClick={handleServices} className="services">Voir les services</button>
+                        <button onClick={handleServices} className="services">{language === "English" ? "view services" : "Voir les services"}</button>
 
                     </div>
                 
@@ -241,9 +304,16 @@ export function Home() {
 
                 <div className="offshore-content">
 
-                    <h2>Des développeurs pour vos gros projets</h2>
-                    <span className="sub-section-title">Saisissez l’opportunité de ...</span> 
-                    <p>Trouver des développeurs vraiment compétents et professionnels, lorsque vous avez un projet ambitieux peut s’avérer être un véritable chemin de croix.</p>
+                    <h2>{language === "English" ? "Developers for your major projects" : "Des développeurs pour vos gros projets"}</h2>
+
+                    <div className="sub-section">
+
+                        <span className="sub-section-title">{language === "English" ? "Seize the opportunity to ..." : "Saisissez l’opportunité de ..."}</span>  
+                        <span className="sub-section-underline" id="section-underline"></span>
+
+                    </div>
+
+                    <p>{language === "English" ? "Finding truly competent and professional developers for your ambitious project can be a real challenge." : "Trouver des développeurs vraiment compétents et professionnels, lorsque vous avez un projet ambitieux peut s’avérer être un véritable chemin de croix."}</p>
 
                     <div className="offshore-sub-content">
 
@@ -251,8 +321,8 @@ export function Home() {
 
                             <div>
 
-                                <p>Vous avez besoin de faire développer un logiciel sur mesure ou une application mobile ? ELYFT vous permet de travailler avec des développeurs chevronnés en France ou en offshore, selon votre convenance, et de profiter des avantages liés aux deux différents cas de figure.</p>
-                                <p>travailler avec des professionnels vous fait économiser du temps, de l’énergie, et vous met à l’abri d’une architecture logicielle mal pensée, ou d’erreurs coûteuses. </p>
+                                <p>{language === "English" ? "Do you need to develop custom software or a mobile application? ELYFT lets you work with experienced developers in France or offshore, as you prefer, and enjoy the benefits of both." : "Vous avez besoin de faire développer un logiciel sur mesure ou une application mobile ? ELYFT vous permet de travailler avec des développeurs chevronnés en France ou en offshore, selon votre convenance, et de profiter des avantages liés aux deux différents cas de figure."}</p>
+                                <p>{language === "English" ? "Working with professionals saves you time and energy, and protects you from poorly thought-out software architecture and costly errors." : "travailler avec des professionnels vous fait économiser du temps, de l’énergie, et vous met à l’abri d’une architecture logicielle mal pensée, ou d’erreurs coûteuses."} </p>
 
 
                             </div>
@@ -272,21 +342,21 @@ export function Home() {
 
                         <div className="offshore-other-text">
 
-                        <span className="offshore-text">Profitez de nos équipes de développeurs (frontend et backend) réactifs et agiles qui communiquent avec vous de manière constante tout au long du projet jusqu’à sa mise en production.</span>
-                        <span className="offshore-text" id="offshore-text-service">Les services proposés :</span>
+                        <span className="offshore-text">{language === "English" ? "Take advantage of our responsive and agile teams of developers (frontend and backend), who communicate with you constantly throughout the project, right up to production launch." : "Profitez de nos équipes de développeurs (frontend et backend) réactifs et agiles qui communiquent avec vous de manière constante tout au long du projet jusqu’à sa mise en production."}</span>
+                        <span className="offshore-text" id="offshore-text-service">{language === "English" ? "Our services:" : "Les services proposés :"}</span>
 
                         <ul className="offshore-text">
 
-                            <li>Développement d’applications sur mesure</li>
-                            <li>Développement d’applications mobiles</li>
-                            <li>Développement d’applications web</li>
+                            <li>{language === "English" ? "Custom application development" : "Développement d’applications sur mesure"}</li>
+                            <li>{language === "English" ? "Mobile application development" : "Développement d’applications mobiles"}</li>
+                            <li>{language === "English" ? "Web application development" : "Développement d’applications web"}</li>
 
                         </ul>
 
-                        <span className="offshore-text" id="offshore-contact">Intéressé(e) par ce service ? Contactez-nous pour en discuter.</span>
+                        <span className="offshore-text" id="offshore-contact">{language === "English" ? "Interested in this service? Contact us to discuss your requirements." : "Intéressé(e) par ce service ? Contactez-nous pour en discuter."}</span>
 
 
-                        <a className="btn-contact" href="#contact">CONTACTEZ-NOUS</a>
+                        <a className="btn-contact" href="#contact">{language === "English" ? "contact us" : "CONTACTEZ-NOUS"}</a>
 
                         </div>
 
@@ -300,7 +370,7 @@ export function Home() {
 
 
                 </div>
-
+ 
                 <div className="team-content" >
 
                     <div className="team-pd">
@@ -309,19 +379,19 @@ export function Home() {
 
                             <div>
 
-                                <img src={girlCode} alt="" className="img-team-bg"/>
-                                <img src={teamWork}  alt="" className="img-team-bg" id="img-team"/>
+                                <img  src={teamWork} alt="" className="img-team-bg"/>
+                                <img src={girlCode}  alt="" className="img-team-bg" id="img-team"/>
 
                             </div>
 
                             <div className="description-work">
 
-                                <h2>UNE EQUIPE AGILE</h2>
-                                <span className="description-title">Ce que nous vous proposons</span>
+                                <h2>{language === "English" ? "An agile team" : "UNE EQUIPE AGILE"}</h2>
+                                <span className="description-title">{language === "English" ? "What we offer" : "Ce que nous vous proposons"}</span>
                                 <ul className="description-point">
 
-                                    <li>Une communication et une collaboration fluides entre les membres de nos équipes et nos clients tout au long du processus de développement.</li>
-                                    <li>La capacité à s’adapter rapidement aux changements, une équipe flexible, un travail ajusté en fonction des retours, des nouvelles exigences et des évolutions du projet.</li>
+                                    <li>{language === "English" ? "Smooth communication and collaboration between our team members and our customers throughout the development process" : "Une communication et une collaboration fluides entre les membres de nos équipes et nos clients tout au long du processus de développement."}</li>
+                                    <li>{language === "English" ? "The ability to adapt quickly to changes, a flexible team, work adjusted according to feedback, new requirements and project developments." : "La capacité à s’adapter rapidement aux changements, une équipe flexible, un travail ajusté en fonction des retours, des nouvelles exigences et des évolutions du projet."}</li>
 
                                 </ul>
 
@@ -334,9 +404,9 @@ export function Home() {
 
                             <ul className="description-point">
 
-                                <li>Un feedback continu des utilisateurs et des membres de l’équipe pour améliorer les processus de travail.</li>
-                                <li>Une gestion transparente des tâches grâce à des outils de gestion de projets.</li>
-                                <li>Une amélioration continue des processus de travail.</li>
+                                <li>{language === "English" ? "Continuous feedback from users and team members to improve work processes." : "Un feedback continu des utilisateurs et des membres de l’équipe pour améliorer les processus de travail."}</li>
+                                <li>{language === "English" ? "Transparent task management using project management tools." : "Une gestion transparente des tâches grâce à des outils de gestion de projets."}</li>
+                                <li>{language === "English" ? "Continuous improvement of work processes." : "Une amélioration continue des processus de travail."}</li>
 
                             </ul>
 
@@ -347,8 +417,8 @@ export function Home() {
 
                 </div>
 
-                <h2 className="section-title">Ecoutez nos clients</h2>
-                <span className="sub-section-title">Ils nous font confiance</span> 
+                <h2 className="section-title">{language === "English" ? "Customer testimonials" : "Ecoutez nos clients"}</h2>
+                <h3 className="sub-section-title">{language === "English" ? "They trust us" : "Ils nous font confiance"}</h3> 
 
                 <div>
                     
@@ -393,17 +463,13 @@ export function Home() {
                             </div> 
 
                             <div className="img-indicator">
-                            {images.map((image, index) => (
+                            {images.map((_image, index) => (
 
                                 <span key={index}>{index === slide ? '●' : '○'}</span>
 
                             ))} 
 
                             </div> 
-
-                           
-
-                            {/* <span className="indicator-slide">...</span>            */}
                             
                         
                         </div>       
@@ -411,14 +477,18 @@ export function Home() {
                     
                     </div>                        
                 
-                </div> 
+                </div>  
             
             </section> 
 
 
         </div>
 
-            <Contact/>
+            <Contact arryServices= {language === "English" ? arryServicesEnglish  : arryServices } textContact={language === "English" ? "Do you have a project to complete, questions about our rates, suggestions or any other concerns, questions or requests? Leave us a message and we'll get back to you within 24 hours." : "Vous avez un projet à réaliser, des questions sur nos tarifs, des suggestions ou toute préoccupation, question ou demande? Laissez-nous un message, nous vous répondons sous 24 heures."} nom ={language === "English" ? "Name*" : "Nom*"} prenom={language === "English" ? "First name" : "Prénom*"}  telephone={language === "English" ? "Phone" : "Téléphone*"} interest={language === "English" ? "The service you're interested in*" : "Le service qui vous interesse*"} need={language === "English" ? "Your needs*" : "Votre besoin*"} send={language === "English" ? "SEND MESSAGE" : "Envoyer"}  
+            textFooter1= {language === "English" ? "Take the plunge into the digital world! Why should you? Because betting on digital technology is a sure-fire way to win." : "Franchissez le pas, faites le grand saut dans l’univers du numérique! Pourquoi? Parce que parier sur le numérique c’est gagner à coup sûr."}
+            textFooter2= {language === "English" ? "At ELYFT, we believe in one thing: technology has the power to facilitate and improve the quality of your processes in every aspect of your business. We work with you to design solutions that meet your real needs. Tailor-made, innovative solutions to make your life easier" : "Chez ELYFT nous croyons en une chose : la technologie a le pouvoir de faciliter, d’améliorer la qualité de vos processus dans tous les aspects de votre activité. Nous vous accompagnons dans la conception de solutions répondant à vos besoins réels. Des solutions sur mesure et innovantes qui vous faciliterons la vie"}
+            mention= {language === "English" ? "Legal Notice" : "Mentions Légales"} adress={ language === "English" ? "Address" : "Adresse"} reservation={language === "English" ? "BOOK AN INTERVIEW"  : "Réserver une entrevue"}
+            accueil= {language === "English" ? "HOME" : "ACCUEIL"}  propos={language === "English" ? "ABOUT US" : "A PROPOS"}/>
 
             
             

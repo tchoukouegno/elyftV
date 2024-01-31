@@ -1,25 +1,52 @@
-import linkedin from "../assets/icons/linkedin.svg";
-import facebook from "../assets/icons/facebook.svg";
-import instagram from "../assets/icons/instagram.svg";
+import linkedins from "../assets/icons/linkedins.svg";
+import facebooks from "../assets/icons/facebooks.svg";
+import instagrams from "../assets/icons/instagrams.svg";
 import chevronDownSolid from "../assets/icons/chevronDownSolid.svg";
 import { useState} from 'react';
 import LogoElyftB from "../assets/logo/LogoElyftB.jpg";
 import LogoElyft from "../assets/logo/LogoElyft.png";
+import {useNavigate} from "react-router-dom";
 
 
 
 
 
-export function Contact () {
+export function Contact ({arryServices, textContact, nom, prenom, telephone, interest, need, send, textFooter1, textFooter2,  mention, adress, reservation, accueil, services, technologie, propos }) {
 
     const [choice, setChoice] = useState("");
     const [isSelected, setIsSelected] = useState(false);
+
+    let navigate = useNavigate();
 
     const handleHome = ()=>{
 
         return  navigate('/home');
   
       }
+
+    const handleTechno = ()=>{
+
+        return navigate('/technologie');
+
+    }
+
+    const handlePropos = ()=>{
+
+        return navigate('/apropos');
+
+    }
+
+    const handleBlog = ()=>{
+
+        return navigate('/blog');
+
+    }
+
+    const handleServices = ()=>{
+
+        return navigate('/services');
+
+    }
 
     const handleItem = ()=>{
 
@@ -38,8 +65,9 @@ export function Contact () {
     
 
 
-    const arryServices = [{service:"Application mobile"},{service:"Application Web"}, {service:"site Web"}, {service:"Logiciel sur mesure"},
-    {service:"Community Management "}, {service:"Référencement SEO"},]
+  
+
+   
 
 
     return(
@@ -53,11 +81,10 @@ export function Contact () {
 
                 <div className="contact-text" >
 
-                <img src={LogoElyft} alt="logo-elyft" onClick={handleHome} className="logo-contact"/>
+                    <img src={LogoElyft} alt="logo-elyft" onClick={handleHome} className="logo-contact"/>
 
-                    {/* <h3>Pret à transformer votre entreprise?</h3> */}
 
-                    <p className="text-contact">Vous avez un projet à réaliser, des questions sur nos tarifs, des suggestions ou toute préoccupation, question ou demande? Laissez-nous un message, nous vous répondons sous 24 heures.</p>
+                    <p className="text-contact">{textContact}</p>
 
 
                 </div>
@@ -68,14 +95,14 @@ export function Contact () {
 
                         <div className="form-item">
 
-                            <label htmlFor="first_name">Nom*</label>
+                            <label htmlFor="first_name">{nom}</label>
                             <input className="input-form" />
 
                         </div>
 
                         <div className="form-item">
 
-                            <label htmlFor="last_name">Prénom*</label>
+                            <label htmlFor="last_name">{prenom}</label>
                             <input  className="input-form"/>
 
                         </div>
@@ -93,7 +120,7 @@ export function Contact () {
 
                         <div className="form-item" >
 
-                            <label htmlFor="phone">Téléphone*</label>
+                            <label htmlFor="phone">{telephone}</label>
                             <input  className="input-form" type="number"/>
 
                         </div>
@@ -104,7 +131,7 @@ export function Contact () {
 
                     <div className="form-item">
 
-                        <label htmlFor="need">Le service qui vous interesse*</label> 
+                        <label htmlFor="need">{interest}</label> 
 
                         <div className='dropDown'>
 
@@ -135,12 +162,12 @@ export function Contact () {
 
                     <div className="form-item">
 
-                        <label htmlFor="need">Votre besoin*</label>                       
+                        <label htmlFor="need">{need}</label>                       
                         <textarea id="message"></textarea>       
 
                     </div>
 
-                    <button className="btn-send" >Envoyer</button>
+                    <button className="btn-send" >{send}</button>
 
                 </form>
 
@@ -152,29 +179,27 @@ export function Contact () {
 
             <div className="footer-text">
 
-                {/* <div className="logo-text" id="logo-color">LOGO</div> */}
 
                 <img src={LogoElyftB} alt="logo-elyft" onClick={handleHome} className="logo-footer"/>
-               
 
-                <p>Franchissez le pas, faites le grand saut dans l’univers du numérique! Pourquoi? Parce que parier sur le numérique c’est gagner à coup sûr.</p>
+                <p>{textFooter1}</p>
 
-                <p>Chez ELYFT nous croyons en une chose : la technologie a le pouvoir de faciliter, d’améliorer la qualité de vos processus dans tous les aspects de votre activité. Nous vous accompagnons dans la conception de solutions répondant à vos besoins réels. Des solutions sur mesure et innovantes qui vous faciliterons la vie</p>
+                <p>{textFooter2}</p>
 
                 <nav>
 
                         <ul className="footer-nav">
 
-                            <li>ACCUEIL</li>
-                            <li>SERVICES</li>
-                            <li>TECHNOLOGIES</li>
-                            <li>A PROPOS</li>
+                            <li onClick={handleHome}>{accueil}</li>
+                            <li onClick={handleServices}>SERVICES</li>
+                            <li onClick={handleTechno}>TECHNOLOGIES</li>
+                            <li onClick={handlePropos}>{propos}</li>
 
                         </ul>
 
                 </nav>
 
-                <p className="reserved">© 2023 Elyft. All Rights Reserved</p>
+                <p className="reserved">© 2024 Elyft. All Rights Reserved</p>
 
 
             </div>
@@ -185,24 +210,24 @@ export function Contact () {
                 <div  className="footer-adress-number">
 
                     <h3>ELYFT</h3>
-                    <span>Adresse : 26 Rue Bosquet, Paris 75007</span>
+                    <span>{adress} : 26 Rue Bosquet, Paris 75007</span>
                     <span>Email : contact@elyft.tech</span>
-                    <span>Tel : +33 7 56 89 35 15</span>
+                    <span>{telephone}: +33 7 56 89 35 15</span>
 
-                    <button className="btn-reservation">Réserver une entrevue</button>
+                    <button className="btn-reservation">{reservation}</button>
 
-
-                </div>
-
-                <div className="social-media">
-
-                    <img src={linkedin} alt="icon linkedin" className="likdn"/>
-                    <img src={facebook} alt="icon facebook" className="fcbk"/>
-                    <img src={instagram} alt="icon instagram" className="insta"/>
 
                 </div>
 
-                <span className="mention">Mentions Légales</span>
+                <div className="social-media-footer">
+
+                    <img src={linkedins} alt="icon linkedin" />
+                    <img src={facebooks} alt="icon facebook" />
+                    <img src={instagrams} alt="icon instagram"/>
+
+                </div>
+
+                <span className="mention">{mention}</span>
 
                 
 
