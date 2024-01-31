@@ -87,10 +87,10 @@ export function Header({pageTitle, contact, srcImg, headerDescription, textUp, a
                 <nav >
 
                     <ul className="nav-bar">
-                        <li className={active}><a onClick={handleHome}>{}ACCUEIL</a></li>
+                        <li className={active}><a onClick={handleHome}>{accueil}</a></li>
                         <li className={activeServices}><a onClick={handleServices} id={ancre}>SERVICES</a></li>
                         <li className={activeTech} onClick={handleTechno}>TECHNOLOGIES</li>
-                        <li className={activePropos} onClick={handlePropos}>A PROPOS</li>
+                        <li className={activePropos} onClick={handlePropos}>{propos}</li>
                         <li className="multi-langue" id="multi-langue" onClick={handleChange}>{language} <img src={chevronDownSolid} className="chevron-down"/></li>
                         
 
