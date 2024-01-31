@@ -1243,7 +1243,7 @@ input:focus {
     background-color: var(--main-color-);
     position: absolute;
     right: 7%;
-    top: -23%;
+    top: -10%;
     cursor: pointer;
     z-index: 7;
     display: block;
