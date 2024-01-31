@@ -2638,6 +2638,20 @@ input:focus {
     
     }
 
+    .multi-langue {
+
+        border: none;
+        
+        
+       
+    }
+
+    .chevron-down {
+
+        visibility: hidden;
+    
+    }
+
     
     
         
