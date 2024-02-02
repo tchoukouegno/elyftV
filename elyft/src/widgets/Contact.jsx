@@ -48,6 +48,12 @@ export function Contact ({arryServices, textContact, nom, prenom, telephone, int
 
     }
 
+    const handleMention = ()=>{
+
+        return navigate('/mention');
+
+    }
+
     const handleItem = ()=>{
 
         setIsSelected(!isSelected);
@@ -227,7 +233,7 @@ export function Contact ({arryServices, textContact, nom, prenom, telephone, int
 
                 </div>
 
-                <span className="mention">{mention}</span>
+                <span className="mention" onClick={handleMention}>{mention}</span>
 
                 
 

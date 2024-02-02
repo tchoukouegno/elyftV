@@ -12,6 +12,7 @@ import { Techno } from '../views/Techno';
 import { Propos } from '../views/Propos';
 import { Blog } from '../views/Blog';
 import { ServiceDetail } from '../views/ServiceDetail';
+import { LegalNotice } from '../views/LegalNotice';
 
 
 
@@ -43,6 +44,8 @@ import { ServiceDetail } from '../views/ServiceDetail';
             <Route path='/apropos' element={<Propos/>}/>
 
             <Route path='/blog' element={<Blog/>}/>
+
+            <Route path='/mention' element={<LegalNotice/>}/>
 
            
 
