@@ -228,6 +228,24 @@ a {
 
 }
 
+.legalText {
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: start !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 0 !important;
+
+}
+
+.legal-Title {
+
+    color: var(--main-color-);
+    font-size: 1.4rem;
+    text-decoration: underline;
+
+}
+
 .body-content p {
 
     font-size: 1.7rem;
