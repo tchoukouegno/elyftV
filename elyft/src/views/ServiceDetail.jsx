@@ -103,7 +103,7 @@ export function ServiceDetail () {
                     </div>
 
 
-                    <div>
+                    <div id="mobApp">
 
                         <h2>{language === "English" ? "Mobile applications for iOS and Android" : "Applications mobiles pour iOS et android"}</h2>
                         <span className="underline-title"></span>
@@ -138,7 +138,7 @@ export function ServiceDetail () {
 
                 </div>
 
-                <div className="app-web-title">
+                <div className="app-web-title" id="webApplication">
 
                       <div>
 
@@ -188,7 +188,7 @@ export function ServiceDetail () {
                     </div>
 
 
-                    <div>
+                    <div id="webSites">
 
                         <h2>{language === "English" ? "RESPONSIVE WEBSITES" : "Sites web responsive"}</h2>
                         <span className="underline-title"></span>
@@ -220,7 +220,7 @@ export function ServiceDetail () {
 
                 <div className="app-web-title">
 
-                      <div>
+                    <div id="customSoftware">
 
                         <h2>{language === "English" ? "CUSTOM SOFTWARE" : "Logiciels sur mesure"}</h2>
                         <span className="underline-title-web"></span>
@@ -268,7 +268,7 @@ export function ServiceDetail () {
                     </div>
 
 
-                    <div>
+                    <div id="community">
 
                         <h2>Community Management</h2>
                         <span className="underline-title"></span>
@@ -301,7 +301,7 @@ export function ServiceDetail () {
                     </ul>
 
 
-                <div className="app-web-title">
+                <div className="app-web-title" id="seo">
 
                       <div>
 

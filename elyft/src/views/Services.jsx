@@ -112,7 +112,7 @@ export function Services () {
 
                             <span className="card-text">{language === "English" ? "Mobile applications have revolutionized the way we interact with technology, giving us fast, personalized access to a wide range of services, and features tailored to our individual needs." : "Les applications mobiles ont révolutionné la manière dont nous interagissons avec la technologie en nous offrant un accès rapide et personnalisé à une vaste gamme de services, et de fonctionnalités adaptées à nos besoins individuels."}</span>
 
-                            <span className="plus" onClick={handleDetails}>{language === "English" ? "Read more" : "En savoir plus"}</span>
+                            <span className="plus" onClick={handleDetails}><a href="#mobApp">{language === "English" ? "Read more" : "En savoir plus"}</a></span>
 
                         </div>
 
@@ -124,11 +124,11 @@ export function Services () {
 
                             <span className="card-text">{language === "English" ? "A web application is a software program or service accessible via an Internet browser, offering a range of functions and services without requiring download or installation on the user's device." : "Une application web est un logiciel ou un service accessible via un navigateur internet, offrant diverses fonctionnalités et services sans nécessiter de téléchargement ou d’installation sur l’appareil de l’utilisateur."}</span>
 
-                            <span className="plus"  onClick={handleDetails}>{language === "English" ? "Read more" : "En savoir plus"}</span>
+                            <span className="plus"  onClick={handleDetails}><a href="#webApplication">{language === "English" ? "Read more" : "En savoir plus"}</a></span>
 
                         </div>
 
-                        <div className="card-item">
+                        <div className="card-item" >
 
                             <img src={appPerso} className="card-img"/>
 
@@ -136,7 +136,7 @@ export function Services () {
 
                             <span className="card-text">{language === "English" ? "A website is a valuable ally for any company. It provides an online presence, increased visibility, ease of communication and the opportunity to generate revenue, while building credibility and trust with customers." : "Un site web est un allié de choix pour une entreprise. En effet il lui apporte une présence en ligne, une visibilité accrue, une facilité de communication et la possibilité de générer des revenus, tout en renforçant la crédibilité et la confiance des clients."}</span>
 
-                            <span className="plus"  onClick={handleDetails}>{language === "English" ? "Read more" : "En savoir plus"}</span>
+                            <span className="plus"  onClick={handleDetails}><a href="#webSites">{language === "English" ? "Read more" : "En savoir plus"}</a></span>
 
                         </div>
 
@@ -148,7 +148,7 @@ export function Services () {
 
                             <span className="card-text">{language === "English" ? "Custom software is software developed specifically to meet the particular needs of a company or individual. Unlike off-the-shelf software, custom software is designed with the precise needs and unique specifications of the end-user in mind." : "Un logiciel sur mesure est un logiciel développé spécifiquement pour répondre à des besoins particuliers d’une entreprise ou d’un individu. Contrairement aux logiciels prêts à l’emploi disponibles sur le marché, les logiciels sur mesure sont conçus en tenant compte des besoins précis et des spécifications uniques de l’utilisateur final"}</span>
 
-                            <span className="plus"  onClick={handleDetails}>{language === "English" ? "Read more" : "En savoir plus"}</span>
+                            <span className="plus"  onClick={handleDetails}><a href="#customSoftware">{language === "English" ? "Read more" : "En savoir plus"}</a></span>
 
                         </div>
 
@@ -161,7 +161,7 @@ export function Services () {
 
                             <span className="card-text">{language === "English" ? "Community Management is the essential tool for strengthening a company's online presence, increasing customer engagement, managing reputation and using community interactions to improve products and services, while boosting visibility and sales. It helps foster user engagement and maximize the impact of the company's activities on social networks." : "L’objectif principal du référencement SEO (Search Engine Optimization) est d’augmenter la quantité et la qualité du trafic vers un site web en augmentant sa visibilité pour les utilisateurs effectuant des recherches pertinentes sur des moteurs de recherche comme Google, Bing, Yahoo, etc."}</span>
 
-                            <span className="plus"  onClick={handleDetails}>{language === "English" ? "Read more" : "En savoir plus"}</span>
+                            <span className="plus"  onClick={handleDetails}><a href="#community">{language === "English" ? "Read more" : "En savoir plus"}</a></span>
 
                         </div>
 
@@ -173,7 +173,7 @@ export function Services () {
 
                             <span className="card-text">{language === "English" ? "The main aim of SEO (Search Engine Optimization) is to increase the quantity and quality of traffic to a website by increasing its visibility to users performing relevant searches on search engines such as Google, Bing, Yahoo, etc." : "Notre équipe utilise la conception centrée sur l'humain pour donné vie à votre vision, en s'appuyant sur la recherche, les parcours clients, les wireframes, le développement de guides de style, et bien plus encore...  "} </span>
 
-                            <span className="plus"  onClick={handleDetails}>{language === "English" ? "Read more" : "En savoir plus"}</span>
+                            <span className="plus"  onClick={handleDetails}><a href="#seo">{language === "English" ? "Read more" : "En savoir plus"}</a></span>
 
                         </div>
 
