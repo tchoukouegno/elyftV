@@ -93,7 +93,7 @@ export function Services () {
         <>
 
             <Header pageTitle= {language === "English" ? "Custom software development" : "Développement de logiciels personnalisés" } contact={language === "English" ? "CONTACT US" : "CONTACTEZ-NOUS" }  srcImg={pexelsFauxels} activeServices="activeServices" handleChange={handleChange} language={language} handleOtherLanguage={handleOtherLanguage} change={change} other={other} 
-        accueil= {language === "English" ? "HOME" : "ACCUEIL"}  propos={language === "English" ? "ABOUT US" : "A PROPOS"} />
+        accueil= {language === "English" ? "HOME" : "ACCUEIL"}  propos={language === "English" ? "ABOUT US" : "A PROPOS"} ancre={"service"} />
 
                <section className="body-content">
 

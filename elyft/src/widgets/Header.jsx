@@ -79,7 +79,7 @@ export function Header({pageTitle, contact, srcImg, headerDescription, textUp, a
 
             <div className="nav-bar-content">
 
-                <img src={LogoElyft} alt="logo-elyft" onClick={handleHome} className="logo"/>
+                <img src={LogoElyft} alt="logo-elyft" onClick={handleHome} className="logo" id={ancre}/>
                 <img src={barsSolid} alt="menu bars" onClick={handleMenu} className="menu-bars"/>
                
                 {menuBar === true ? 
@@ -106,7 +106,7 @@ export function Header({pageTitle, contact, srcImg, headerDescription, textUp, a
 
                     <ul className="nav-bar">
                         <li className={active}><a onClick={handleHome}>{accueil}</a></li>
-                        <li className={activeServices}><a onClick={handleServices} id={ancre}>SERVICES</a></li>
+                        <li className={activeServices}><a onClick={handleServices} >SERVICES</a></li>
                         <li className={activeTech} onClick={handleTechno}>TECHNOLOGIES</li>
                         <li className={activePropos} onClick={handlePropos}>{propos}</li>
                         <li className="multi-langue" id="multi-langue" onClick={handleChange}>{language} <img src={chevronDownSolid} className="chevron-down"/></li>

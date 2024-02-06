@@ -296,7 +296,7 @@ export function Home() {
                     
                     <div className="slider-indicator">
 
-                        <button onClick={handleServices} className="services">{language === "English" ? "view services" : "Voir les services"}</button>
+                        <button onClick={handleServices} className="services"><a href="#service">{language === "English" ? "view services" : "Voir les services"}</a></button>
 
                     </div>
                 

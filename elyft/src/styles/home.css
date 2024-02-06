@@ -522,6 +522,7 @@ a {
 
 .services {
 
+    display: block;
     color: #FFFFFF;
     border: none;
     width: 150px;
@@ -536,14 +537,14 @@ a {
 
 }
 
-.services:hover {
+/* .services:hover {
 
     background-color: #FFFFFF;
     border: 1px solid var(--main-color-);
     color: #000000;
     transition: 300ms ease-in-out;
 
-}
+} */
 
 .team-work {
 
