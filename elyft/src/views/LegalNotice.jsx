@@ -98,7 +98,7 @@ export function LegalNotice() {
         <>
         
         <Header pageTitle= {language === "English" ? "Our commitment to quality" : "Notre engagement envers la qualité des services fournis" } contact={language === "English" ? "CONTACT US" : "CONTACTEZ-NOUS" }  srcImg={pexelsLukas}  handleChange={handleChange} language={language} handleOtherLanguage={handleOtherLanguage} change={change} other={other} 
-                    accueil= {language === "English" ? "HOME" : "ACCUEIL"}  propos={language === "English" ? "ABOUT US" : "A PROPOS"} />
+                    accueil= {language === "English" ? "HOME" : "ACCUEIL"}  propos={language === "English" ? "ABOUT US" : "A PROPOS"}  />
         
         <div className="bloc-page">
 

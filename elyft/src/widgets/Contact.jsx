@@ -233,7 +233,7 @@ export function Contact ({arryServices, textContact, nom, prenom, telephone, int
 
                 </div>
 
-                <span className="mention" onClick={handleMention}>{mention}</span>
+                <span className="mention" onClick={handleMention}> <a href="#LegalNotice">{mention}</a></span>
 
                 
 

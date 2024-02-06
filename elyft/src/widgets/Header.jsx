@@ -75,7 +75,7 @@ export function Header({pageTitle, contact, srcImg, headerDescription, textUp, a
 
         <header className="header-content" id="bloc-page">
 
-            <img src={srcImg} className="home-header" alt="home-header"/>
+            <img src={srcImg} className="home-header" alt="home-header" id="LegalNotice"/>
 
             <div className="nav-bar-content">
 
