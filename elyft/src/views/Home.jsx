@@ -226,21 +226,21 @@ export function Home() {
                         <div className="value-bx">
 
                             <img src={icons8BalanceScale} alt="equité" className="value-item" />
-                            <span>{language === "English" ? "responsiveness" : "Réactivité"}</span>
+                            <h3>{language === "English" ? "responsiveness" : "Réactivité"}</h3>
 
                         </div>
 
                         <div className="value-bx">
 
                             <img src={icons8Respect} alt="respect" className="value-item" />
-                            <span>{language === "English" ? "Innovation" : "Innovation"}</span>
+                            <h3>{language === "English" ? "Innovation" : "Innovation"}</h3>
 
                         </div>
 
                         <div className="value-bx">
 
                             <img src={icons8GraduationCap} alt="excellence" className="value-item" />
-                            <span>{language === "English" ? "Quality" : "Qualité"}</span>
+                            <h3>{language === "English" ? "Quality" : "Qualité"}</h3>
 
                         </div>
 

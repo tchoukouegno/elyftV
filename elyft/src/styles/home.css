@@ -388,6 +388,7 @@ a {
     font-weight: bold;
     text-transform:uppercase !important;
     text-align: center;
+    font-family: "Signika", sans-serif;
 
 }
 
@@ -475,6 +476,8 @@ a {
     gap: 10px;
     background-color: #FFFFFF;
     transition: 300ms ease-in-out;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
 
 }
 
@@ -546,6 +549,7 @@ a {
     cursor: pointer;
     transition: 300ms ease-in-out;
     text-align: center;
+    font-family: "Signika", sans-serif;
 
 }
 
@@ -581,6 +585,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Signika", sans-serif;
 
 }
 
@@ -650,6 +655,7 @@ a {
 
     margin-bottom: 10px;
     font-size: 1.1rem;
+    font-family: "Signika", sans-serif;
 
 }
 
@@ -719,6 +725,7 @@ a {
 
     font-weight: bold;
     font-size: 2rem;
+    font-family: "Signika", sans-serif;
     
 }
 
@@ -768,6 +775,7 @@ a {
 .customer-post {
 
     transform: translate3d(0,-45px,0);
+    font-family: "Signika", sans-serif;
 
 }
 
@@ -1098,6 +1106,7 @@ input:focus {
     transform: translate3d(0,40px,0) !important;
    display: flex;
    justify-content: center;
+   font-family: "Signika", sans-serif;
    
   
    
