@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
 *, *::before, *::after {
 
     box-sizing: border-box;
@@ -14,7 +18,7 @@ html {
 html,body {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    /* font-family: "Oswald", sans-serif; */
     background-color: #FBFBFB;
 }
 
@@ -103,6 +107,7 @@ html,body {
     gap: 30px;
     list-style: none;
     font-size: 1.1rem;
+    font-family: "Oswald", sans-serif;
 
 }
 
@@ -164,6 +169,7 @@ html,body {
     left: 13%;
     width: 900px;
     text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
 
 }
 
@@ -184,6 +190,7 @@ html,body {
     z-index: 5;
     cursor: pointer;
     transition: 500ms ease-in-out;
+    font-family: "Signika", sans-serif;
 
 }
 
@@ -225,6 +232,7 @@ a {
     text-align: center;
     text-transform: capitalize;
     color: var(--secondary-color-);
+    font-family: "Oswald", sans-serif;
 
 }
 
@@ -253,6 +261,7 @@ a {
     padding-left: 100px;
     padding-right: 100px;
     margin-bottom: 50px;
+    font-family: "Signika", sans-serif;
 }
 
 .icon-illustrator {
@@ -268,6 +277,7 @@ a {
     margin-bottom: 40px;
     gap: 50px;
     justify-content: center;
+    
 
 }
 
@@ -299,7 +309,7 @@ a {
     text-align: center;
     text-transform: capitalize;
     width: 400px;
-    
+    font-family: "Oswald", sans-serif;
 }
 
 .proximity-customer div {
@@ -353,6 +363,7 @@ a {
     text-align: center;
     margin-top: 5px;
     font-size: 1.1rem;
+    font-family: "Signika", sans-serif;
 
 }
 
@@ -404,7 +415,8 @@ a {
 
     font-size: 2.5rem;
     text-align: center;
-    color:var(--secondary-color-)
+    color:var(--secondary-color-);
+    font-family: "Oswald", sans-serif;
 
 }
 
@@ -1719,6 +1731,7 @@ input:focus {
 
         gap: 17px;
         font-size: 0.9rem;
+        
     
     }
 
