@@ -451,6 +451,8 @@ a {
    text-align: center;
    margin-top: 8px;
    padding-left: 15px;
+   font-family: "Signika", sans-serif;
+   font-weight: bold;
 
 }
 
@@ -1106,9 +1108,7 @@ input:focus {
     transform: translate3d(0,40px,0) !important;
    display: flex;
    justify-content: center;
-   font-family: "Signika", sans-serif;
-   
-  
+   font-family: "Signika", sans-serif; 
    
 }
 
@@ -1441,6 +1441,7 @@ input:focus {
     bottom: 30px;
     left: 35px;
     cursor: pointer;
+    font-family: "Signika", sans-serif;
 
 }
 
@@ -1465,6 +1466,7 @@ input:focus {
     justify-content: center;
     align-items: center; 
     margin-top: 20px;
+    font-family: "Signika", sans-serif;
     
 
 }
@@ -1489,6 +1491,7 @@ input:focus {
 
     text-align: center;
     font-size: 1.3rem !important;
+    
 
 }
 
@@ -1598,15 +1601,16 @@ input:focus {
 .body-content-apropos {
 
     display: flex;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 30px;
 
 }
 
 .body-content-apropos div {
 
     transform: translate3d(0,100px,0);
-
+   
 }
 
 .body-content-apropos img {
@@ -1621,6 +1625,7 @@ input:focus {
     font-size: 1.2rem !important;
     margin-bottom: 20px;
     display: block;
+    font-family: "Signika", sans-serif;
    
 }
 
@@ -1682,6 +1687,7 @@ input:focus {
     margin-bottom: 30px;
     font-size: 1.2rem;
     text-align: justify;
+    font-family: "Signika", sans-serif;
 
 }
 
@@ -1695,6 +1701,7 @@ input:focus {
 
     font-size: 1.2rem;
     margin: 15px;
+    font-family: "Signika", sans-serif;
 
 }
 
@@ -2017,6 +2024,7 @@ input:focus {
         width: 100%;
         font-size: 1.2rem;
         text-align: start;
+        
        
     }
 
