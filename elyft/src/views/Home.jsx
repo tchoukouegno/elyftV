@@ -12,7 +12,6 @@ import trophySolid from "../assets/icons/trophySolid.svg"
 import { Contact } from "../widgets/Contact";
 import {useNavigate,} from "react-router-dom";
 import homeHeader from "../assets/img/homeHeader.jpg";
-import icons8BalanceScale from "../assets/icons/icons8BalanceScale.png";
 import icons8Speedometer from "../assets/icons/icons8Speedometer.png";
 import icons8Innovation from "../assets/icons/icons8Innovation.png";
 import icons8Quality from "../assets/icons/icons8Quality.png";
