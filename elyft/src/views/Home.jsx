@@ -2,6 +2,7 @@ import { Header } from "../widgets/Header";
 import chartSimpleSolid from "../assets/icons/chartSimpleSolid.svg";
 import yougCoupleWork from "../assets/img/yougCoupleWork.jpg";
 import girlCode from "../assets/img/girlCode.jpg";
+import dev from "../assets/img/dev.jpg";
 import ingenieurGirl from "../assets/img/ingenieurGirl.jpg";
 import teamWork from "../assets/img/teamWork.jpg";
 import pexelsDarlene from "../assets/img/pexelsDarlene.jpg";
@@ -382,7 +383,7 @@ export function Home() {
                             <div>
 
                                 <img  src={teamWork} alt="" className="img-team-bg"/>
-                                <img src={girlCode}  alt="" className="img-team-bg" id="img-team"/>
+                                <img src={dev}  alt="" className="img-team-bg" id="img-team"/>
 
                             </div>
 
