@@ -423,8 +423,8 @@ a {
 
 .value-item {
 
-    height:100px;
-    width: 100px;
+    height:80px;
+    width: 80px;
 
 }
 
@@ -480,6 +480,8 @@ a {
     transition: 300ms ease-in-out;
     font-family: "Oswald", sans-serif;
     font-weight: bold;
+    padding-top: 20px;
+    
 
 }
 

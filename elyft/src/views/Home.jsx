@@ -11,8 +11,9 @@ import { Contact } from "../widgets/Contact";
 import {useNavigate,} from "react-router-dom";
 import homeHeader from "../assets/img/homeHeader.jpg";
 import icons8BalanceScale from "../assets/icons/icons8BalanceScale.png";
-import icons8Respect from "../assets/icons/icons8Respect.png";
-import icons8GraduationCap from "../assets/icons/icons8GraduationCap.png";
+import icons8Speedometer from "../assets/icons/icons8Speedometer.png";
+import icons8Innovation from "../assets/icons/icons8Innovation.png";
+import icons8Quality from "../assets/icons/icons8Quality.png";
 import icons8Android from "../assets/icons/icons8Android.png";
 import icons8WebSite from "../assets/icons/icons8WebSite.png";
 import icons8ImacSettings from "../assets/icons/icons8ImacSettings.png";
@@ -225,21 +226,21 @@ export function Home() {
 
                         <div className="value-bx">
 
-                            <img src={icons8BalanceScale} alt="equité" className="value-item" />
+                            <img src={icons8Speedometer} alt="responsiveness" className="value-item" />
                             <h3>{language === "English" ? "responsiveness" : "Réactivité"}</h3>
 
                         </div>
 
                         <div className="value-bx">
 
-                            <img src={icons8Respect} alt="respect" className="value-item" />
+                            <img src={icons8Innovation} alt="innovation" className="value-item" />
                             <h3>{language === "English" ? "Innovation" : "Innovation"}</h3>
 
                         </div>
 
                         <div className="value-bx">
 
-                            <img src={icons8GraduationCap} alt="excellence" className="value-item" />
+                            <img src={icons8Quality} alt="quality" className="value-item" />
                             <h3>{language === "English" ? "Quality" : "Qualité"}</h3>
 
                         </div>
