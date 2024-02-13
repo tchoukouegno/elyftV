@@ -2,6 +2,7 @@ import { Header } from "../widgets/Header";
 import chartSimpleSolid from "../assets/icons/chartSimpleSolid.svg";
 import yougCoupleWork from "../assets/img/yougCoupleWork.jpg";
 import girlCode from "../assets/img/girlCode.jpg";
+import ingenieurGirl from "../assets/img/ingenieurGirl.jpg";
 import teamWork from "../assets/img/teamWork.jpg";
 import pexelsDarlene from "../assets/img/pexelsDarlene.jpg";
 import chevronRight from "../assets/icons/chevronRight.svg";
@@ -328,7 +329,7 @@ export function Home() {
 
                             </div>
 
-                            <img src={girlCode} alt="" className="offshore-picture" />
+                            <img src={ingenieurGirl} alt="ingenieur femme" className="offshore-picture" />
 
                             <div >
 
